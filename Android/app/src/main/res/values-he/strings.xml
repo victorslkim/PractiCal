@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">היום</string>
+    <string name="search">חיפוש</string>
+    <string name="settings">הגדרות</string>
+    <string name="calendar_selection">לוחות שנה</string>
+    <string name="add_event">הוסף אירוע</string>
+    
+    <!-- Month names -->
+    <string name="january">ינו</string>
+    <string name="february">פבר</string>
+    <string name="march">מרץ</string>
+    <string name="april">אפר</string>
+    <string name="may">מאי</string>
+    <string name="june">יונ</string>
+    <string name="july">יול</string>
+    <string name="august">אוג</string>
+    <string name="september">ספט</string>
+    <string name="october">אוק</string>
+    <string name="november">נוב</string>
+    <string name="december">דצמ</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">כללי</string>
+    <string name="appearance">מראה</string>
+    <string name="edit_event">עריכת אירוע</string>
+    <string name="notification">התראה</string>
+    <string name="support">תמיכה</string>
+    <string name="send_feedback">שליחת משוב</string>
+    <string name="help">עזרה</string>
+    <string name="support_practical">תמיכה ב-PractiCal</string>
+    <string name="share_app">שיתוף האפליקציה</string>
+    <string name="write_app_store_review">כתיבת ביקורת ב-App Store</string>
+    <string name="donation">תרומה</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Calendar</string>
+    <string name="icloud_calendar">iCloud Calendar</string>
+    <string name="apple_calendar">Apple Calendar</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">א׳</string>
+    <string name="monday">ב׳</string>
+    <string name="tuesday">ג׳</string>
+    <string name="wednesday">ד׳</string>
+    <string name="thursday">ה׳</string>
+    <string name="friday">ו׳</string>
+    <string name="saturday">ש׳</string>
+    
+    <!-- Event details -->
+    <string name="all_day">כל היום</string>
+    <string name="no_events">אין אירועים</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">נדרשת הרשאת לוח שנה</string>
+    <string name="calendar_permission_message">PractiCal זקוק לגישה ללוח השנה שלך כדי להציג ולנהל את האירועים שלך.</string>
+    <string name="grant_permission">מתן הרשאה</string>
+    <string name="deny_permission">דחייה</string>
+</resources>

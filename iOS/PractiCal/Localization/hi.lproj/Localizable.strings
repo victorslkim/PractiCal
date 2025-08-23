@@ -1,0 +1,89 @@
+/* General */
+"settings" = "सेटिंग्स";
+"done" = "हो गया";
+"cancel" = "रद्द करें";
+"save" = "सेव करें";
+"delete" = "हटाएं";
+"edit" = "संपादित करें";
+"add" = "जोड़ें";
+"search" = "खोजें";
+"ok" = "ठीक है";
+"clear" = "साफ़ करें";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "आज";
+"all_day" = "पूरा दिन";
+"no_events" = "कोई घटना नहीं";
+
+/* Settings */
+"general" = "सामान्य";
+"appearance" = "दिखावट";
+"edit_event" = "घटना संपादित करें";
+"notification" = "अधिसूचना";
+"support" = "समर्थन";
+"send_feedback" = "फीडबैक भेजें";
+"help" = "सहायता";
+"support_practical" = "PractiCal का समर्थन करें";
+"share_app" = "ऐप साझा करें";
+"write_review" = "App Store समीक्षा लिखें";
+"donation" = "दान";
+
+/* Appearance Settings */
+"preview" = "पूर्वावलोकन";
+"calendar_settings" = "कैलेंडर सेटिंग्स";
+"first_day_of_week" = "सप्ताह का पहला दिन";
+"theme" = "थीम";
+"accent_color" = "एक्सेंट रंग";
+"highlight" = "हाइलाइट";
+"language" = "भाषा";
+"holidays" = "छुट्टियां";
+"saturdays" = "शनिवार";
+"sundays" = "रविवार";
+"sat" = "शनि";
+"sun" = "रवि";
+
+/* Language */
+"system_default" = "सिस्टम डिफ़ॉल्ट";
+"search_languages" = "भाषाएं खोजें";
+
+/* Week Days */
+"sunday" = "रविवार";
+"monday" = "सोमवार";
+"tuesday" = "मंगलवार";
+"wednesday" = "बुधवार";
+"thursday" = "गुरुवार";
+"friday" = "शुक्रवार";
+"saturday" = "शनिवार";
+
+/* Themes */
+"system" = "सिस्टम";
+"light" = "हल्का";
+"dark" = "गहरा";
+
+/* Event Editor */
+"new_event" = "नई घटना";
+"event_title" = "घटना का शीर्षक";
+"location" = "स्थान";
+"url" = "URL";
+"notes" = "नोट्स";
+"start_date" = "शुरुआत";
+"end_date" = "अंत";
+"calendar" = "कैलेंडर";
+"alert" = "अलर्ट";
+"repeat" = "दोहराएं";
+"remove_event" = "घटना हटाएं";
+"remove_event_confirmation" = "घटना हटाएं";
+"remove_event_message" = "क्या आप वाकई इस घटना को हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।";
+
+/* Alerts */
+"couldnt_save_event" = "घटना सेव नहीं हो सकी";
+"try_again" = "कृपया फिर से कोशिश करें या कोई अलग कैलेंडर चुनें।";
+"email_not_available" = "ईमेल उपलब्ध नहीं";
+"setup_mail" = "कृपया मेल ऐप सेट करें या हमसे feedback@practical.app पर संपर्क करें";
+"read_only_calendar" = "केवल पढ़ने योग्य कैलेंडर";
+
+/* Error Messages */
+"failed_to_delete" = "घटना हटाने में विफल। कृपया फिर से कोशिश करें।";
+"failed_to_save" = "चयनित कैलेंडर में सेव करने में विफल। यह केवल पढ़ने योग्य हो सकता है या अस्थायी रूप से अनुपलब्ध।";
+"read_only_calendar_message" = "इस कैलेंडर को iOS कैलेंडर के माध्यम से संशोधित नहीं किया जा सकता।\n\nसंभावित कारण:\n- सब्स्क्राइब किया गया (ICS) कैलेंडर\n- छुट्टियां/जन्मदिन या अन्य सिस्टम कैलेंडर\n- 'परिवर्तन करें' अधिकार के बिना साझा कैलेंडर\n\nसेटिंग्स > कैलेंडर > खाते के तहत अपना Google खाता जोड़ें और इसके बजाय एक संपादन योग्य Gmail कैलेंडर चुनें।";

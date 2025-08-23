@@ -1,0 +1,82 @@
+# Build artifacts
+PractiCal.app/
+PractiCal-Simulator.app/
+PractiCal.app.entitlements
+
+# Compiled binaries and intermediate files
+PractiCal-Device
+PractiCal-Simulator
+PractiCal/PractiCal
+PractiCal/PractiCal-Simulator
+PractiCal/PractiCal-iOS
+test-lang
+*.o
+*.dSYM
+
+# Build configuration (contains sensitive Apple Developer info)
+build.config
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+build/
+
+# Android
+Android/.gradle/
+Android/.idea/
+Android/app/build/
+Android/build/
+Android/local.properties
+Android/gradle.properties
+Android/keystore.properties
+Android/*.keystore
+Android/*.jks
+Android/app/release/
+Android/app/debug/output-metadata.json
+Android/app/src/main/res/values/google-services.json
+Android/app/google-services.json
+Android/captures/
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Screenshots
+Screenshots/
+Design/
+
+# Personal and sensitive data
+*.key
+*.p12
+*.mobileprovision
+*.provisionprofile
+**/secrets.json
+**/config.json
+**/credentials.json
+**/*secret*
+**/*credential*
+**/*password*
+**/*token*
+**/*api-key*
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude code
+.claude
+Claude.md

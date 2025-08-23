@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">今日</string>
+    <string name="search">検索</string>
+    <string name="settings">設定</string>
+    <string name="calendar_selection">カレンダー</string>
+    <string name="add_event">イベントを追加</string>
+    
+    <!-- Month names -->
+    <string name="january">1月</string>
+    <string name="february">2月</string>
+    <string name="march">3月</string>
+    <string name="april">4月</string>
+    <string name="may">5月</string>
+    <string name="june">6月</string>
+    <string name="july">7月</string>
+    <string name="august">8月</string>
+    <string name="september">9月</string>
+    <string name="october">10月</string>
+    <string name="november">11月</string>
+    <string name="december">12月</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">一般</string>
+    <string name="appearance">外観</string>
+    <string name="edit_event">イベントを編集</string>
+    <string name="notification">通知</string>
+    <string name="support">サポート</string>
+    <string name="send_feedback">フィードバックを送信</string>
+    <string name="help">ヘルプ</string>
+    <string name="support_practical">PractiCalをサポート</string>
+    <string name="share_app">アプリを共有</string>
+    <string name="write_app_store_review">App Storeレビューを書く</string>
+    <string name="donation">寄付</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google カレンダー</string>
+    <string name="icloud_calendar">iCloud カレンダー</string>
+    <string name="apple_calendar">Apple カレンダー</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">日</string>
+    <string name="monday">月</string>
+    <string name="tuesday">火</string>
+    <string name="wednesday">水</string>
+    <string name="thursday">木</string>
+    <string name="friday">金</string>
+    <string name="saturday">土</string>
+    
+    <!-- Event details -->
+    <string name="all_day">終日</string>
+    <string name="no_events">イベントなし</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">カレンダー許可が必要</string>
+    <string name="calendar_permission_message">PractiCalはイベントの表示と管理のためにカレンダーへのアクセスが必要です。</string>
+    <string name="grant_permission">許可を与える</string>
+    <string name="deny_permission">拒否</string>
+</resources>

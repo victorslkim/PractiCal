@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Настройки";
+"done" = "Готово";
+"cancel" = "Отказ";
+"save" = "Запазване";
+"delete" = "Изтриване";
+"edit" = "Редактиране";
+"add" = "Добавяне";
+"search" = "Търсене";
+"ok" = "OK";
+"clear" = "Изчистване";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Днес";
+"all_day" = "Цял ден";
+"no_events" = "Няма събития";
+
+/* Settings */
+"general" = "Общи";
+"appearance" = "Външен вид";
+"edit_event" = "Редактиране на събитие";
+"notification" = "Известие";
+"support" = "Поддръжка";
+"send_feedback" = "Изпращане на отзив";
+"help" = "Помощ";
+"support_practical" = "Подкрепете PractiCal";
+"share_app" = "Споделяне на приложението";
+"write_review" = "Напишете отзив в App Store";
+"donation" = "Дарение";
+
+/* Appearance Settings */
+"preview" = "Преглед";
+"calendar_settings" = "Настройки на календара";
+"first_day_of_week" = "Първи ден от седмицата";
+"theme" = "Тема";
+"accent_color" = "Акцентен цвят";
+"highlight" = "Подчертаване";
+"language" = "Език";
+"holidays" = "Празници";
+"saturdays" = "Съботи";
+"sundays" = "Недели";
+"sat" = "Съб";
+"sun" = "Нед";
+
+/* Language */
+"system_default" = "Системна настройка по подразбиране";
+"search_languages" = "Търсене на езици";
+
+/* Week Days */
+"sunday" = "Неделя";
+"monday" = "Понеделник";
+"tuesday" = "Вторник";
+"wednesday" = "Сряда";
+"thursday" = "Четвъртък";
+"friday" = "Петък";
+"saturday" = "Събота";
+
+/* Themes */
+"system" = "Система";
+"light" = "Светла";
+"dark" = "Тъмна";
+
+/* Event Editor */
+"new_event" = "Ново събитие";
+"event_title" = "Заглавие на събитието";
+"location" = "Местоположение";
+"url" = "URL";
+"notes" = "Бележки";
+"start_date" = "Начало";
+"end_date" = "Край";
+"calendar" = "Календар";
+"alert" = "Предупреждение";
+"repeat" = "Повторение";
+"remove_event" = "Премахване на събитие";
+"remove_event_confirmation" = "Премахване на събитие";
+"remove_event_message" = "Сигурни ли сте, че искате да премахнете това събитие? Това действие не може да бъде отменено.";
+
+/* Alerts */
+"couldnt_save_event" = "Не можа да се запази събитието";
+"try_again" = "Моля, опитайте отново или изберете друг календар.";
+"email_not_available" = "Имейлът не е наличен";
+"setup_mail" = "Моля, настройте приложението Mail или се свържете с нас на feedback@practical.app";
+"read_only_calendar" = "Календар само за четене";
+
+/* Error Messages */
+"failed_to_delete" = "Неуспешно изтриване на събитието. Опитайте отново.";
+"failed_to_save" = "Неуспешно запазване в избрания календар. Може да е само за четене или временно недостъпен.";
+"read_only_calendar_message" = "Този календар не може да бъде променян чрез iOS Календари.\n\nВъзможни причини:\n- Абониран (ICS) календар\n- Празници/Рождени дни или друг системен календар\n- Споделен календар без права за 'Правене на промени'\n\nДобавете вашия Google акаунт в Настройки > Календар > Акаунти и изберете редактируем Gmail календар.";

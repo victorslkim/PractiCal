@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Postavke";
+"done" = "Gotovo";
+"cancel" = "Otkaži";
+"save" = "Spremi";
+"delete" = "Obriši";
+"edit" = "Uredi";
+"add" = "Dodaj";
+"search" = "Pretraži";
+"ok" = "U redu";
+"clear" = "Očisti";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Danas";
+"all_day" = "Cijeli dan";
+"no_events" = "Nema događaja";
+
+/* Settings */
+"general" = "Općenito";
+"appearance" = "Izgled";
+"edit_event" = "Uredi događaj";
+"notification" = "Obavijest";
+"support" = "Podrška";
+"send_feedback" = "Pošaljite povratne informacije";
+"help" = "Pomoć";
+"support_practical" = "Podržite PractiCal";
+"share_app" = "Podijelite aplikaciju";
+"write_review" = "Napišite recenziju u App Store";
+"donation" = "Donacija";
+
+/* Appearance Settings */
+"preview" = "Pregled";
+"calendar_settings" = "Postavke kalendara";
+"first_day_of_week" = "Prvi dan u tjednu";
+"theme" = "Tema";
+"accent_color" = "Boja naglaska";
+"highlight" = "Istakni";
+"language" = "Jezik";
+"holidays" = "Praznici";
+"saturdays" = "Subote";
+"sundays" = "Nedjelje";
+"sat" = "Sub";
+"sun" = "Ned";
+
+/* Language */
+"system_default" = "Zadana postavka sustava";
+"search_languages" = "Pretraži jezike";
+
+/* Week Days */
+"sunday" = "Nedjelja";
+"monday" = "Ponedjeljak";
+"tuesday" = "Utorak";
+"wednesday" = "Srijeda";
+"thursday" = "Četvrtak";
+"friday" = "Petak";
+"saturday" = "Subota";
+
+/* Themes */
+"system" = "Sustav";
+"light" = "Svijetla";
+"dark" = "Tamna";
+
+/* Event Editor */
+"new_event" = "Novi događaj";
+"event_title" = "Naslov događaja";
+"location" = "Lokacija";
+"url" = "URL";
+"notes" = "Bilješke";
+"start_date" = "Početak";
+"end_date" = "Kraj";
+"calendar" = "Kalendar";
+"alert" = "Upozorenje";
+"repeat" = "Ponovi";
+"remove_event" = "Ukloni događaj";
+"remove_event_confirmation" = "Ukloni događaj";
+"remove_event_message" = "Jeste li sigurni da želite ukloniti ovaj događaj? Ova se radnja ne može poništiti.";
+
+/* Alerts */
+"couldnt_save_event" = "Događaj se nije mogao spremiti";
+"try_again" = "Pokušajte ponovno ili odaberite drugi kalendar.";
+"email_not_available" = "E-pošta nije dostupna";
+"setup_mail" = "Postavite aplikaciju Mail ili nas kontaktirajte na feedback@practical.app";
+"read_only_calendar" = "Kalendar samo za čitanje";
+
+/* Error Messages */
+"failed_to_delete" = "Brisanje događaja nije uspjelo. Pokušajte ponovno.";
+"failed_to_save" = "Spremanje u odabrani kalendar nije uspjelo. Možda je samo za čitanje ili privremeno nedostupan.";
+"read_only_calendar_message" = "Ovaj se kalendar ne može mijenjati putem iOS Kalendara.\n\nMogući razlozi:\n- Pretplaćeni (ICS) kalendar\n- Praznici/Rođendani ili drugi sistemski kalendar\n- Dijeljeni kalendar bez prava 'Napravi promjene'\n\nDodajte svoj Google račun u Postavke > Kalendar > Računi i odaberite uređivi Gmail kalendar.";

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">आज</string>
+    <string name="search">खोजें</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="calendar_selection">कैलेंडर</string>
+    <string name="add_event">घटना जोड़ें</string>
+    
+    <!-- Month names -->
+    <string name="january">जनवरी</string>
+    <string name="february">फरवरी</string>
+    <string name="march">मार्च</string>
+    <string name="april">अप्रैल</string>
+    <string name="may">मई</string>
+    <string name="june">जून</string>
+    <string name="july">जुलाई</string>
+    <string name="august">अगस्त</string>
+    <string name="september">सितंबर</string>
+    <string name="october">अक्टूबर</string>
+    <string name="november">नवंबर</string>
+    <string name="december">दिसंबर</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">सामान्य</string>
+    <string name="appearance">दिखावट</string>
+    <string name="edit_event">घटना संपादित करें</string>
+    <string name="notification">अधिसूचना</string>
+    <string name="support">समर्थन</string>
+    <string name="send_feedback">फीडबैक भेजें</string>
+    <string name="help">सहायता</string>
+    <string name="support_practical">PractiCal का समर्थन करें</string>
+    <string name="share_app">ऐप साझा करें</string>
+    <string name="write_app_store_review">App Store समीक्षा लिखें</string>
+    <string name="donation">दान</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google कैलेंडर</string>
+    <string name="icloud_calendar">iCloud कैलेंडर</string>
+    <string name="apple_calendar">Apple कैलेंडर</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">रवि</string>
+    <string name="monday">सोम</string>
+    <string name="tuesday">मंगल</string>
+    <string name="wednesday">बुध</string>
+    <string name="thursday">गुरु</string>
+    <string name="friday">शुक्र</string>
+    <string name="saturday">शनि</string>
+    
+    <!-- Event details -->
+    <string name="all_day">पूरा दिन</string>
+    <string name="no_events">कोई घटना नहीं</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">कैलेंडर अनुमति आवश्यक</string>
+    <string name="calendar_permission_message">PractiCal को आपकी घटनाओं को प्रदर्शित और प्रबंधित करने के लिए आपके कैलेंडर तक पहुंच की आवश्यकता है।</string>
+    <string name="grant_permission">अनुमति दें</string>
+    <string name="deny_permission">मना करें</string>
+</resources>

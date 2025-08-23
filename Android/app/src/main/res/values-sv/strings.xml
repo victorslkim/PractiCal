@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">Idag</string>
+    <string name="search">Sök</string>
+    <string name="settings">Inställningar</string>
+    <string name="calendar_selection">Kalendrar</string>
+    <string name="add_event">Lägg till händelse</string>
+    
+    <!-- Month names -->
+    <string name="january">JAN</string>
+    <string name="february">FEB</string>
+    <string name="march">MAR</string>
+    <string name="april">APR</string>
+    <string name="may">MAJ</string>
+    <string name="june">JUN</string>
+    <string name="july">JUL</string>
+    <string name="august">AUG</string>
+    <string name="september">SEP</string>
+    <string name="october">OKT</string>
+    <string name="november">NOV</string>
+    <string name="december">DEC</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">Allmänt</string>
+    <string name="appearance">Utseende</string>
+    <string name="edit_event">Redigera händelse</string>
+    <string name="notification">Meddelande</string>
+    <string name="support">Support</string>
+    <string name="send_feedback">Skicka feedback</string>
+    <string name="help">Hjälp</string>
+    <string name="support_practical">Stöd PractiCal</string>
+    <string name="share_app">Dela app</string>
+    <string name="write_app_store_review">Skriv App Store-recension</string>
+    <string name="donation">Donation</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Kalender</string>
+    <string name="icloud_calendar">iCloud Kalender</string>
+    <string name="apple_calendar">Apple Kalender</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">Sön</string>
+    <string name="monday">Mån</string>
+    <string name="tuesday">Tis</string>
+    <string name="wednesday">Ons</string>
+    <string name="thursday">Tor</string>
+    <string name="friday">Fre</string>
+    <string name="saturday">Lör</string>
+    
+    <!-- Event details -->
+    <string name="all_day">Hela dagen</string>
+    <string name="no_events">Inga händelser</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">Kalendertillstånd krävs</string>
+    <string name="calendar_permission_message">PractiCal behöver åtkomst till din kalender för att visa och hantera dina händelser.</string>
+    <string name="grant_permission">Ge tillstånd</string>
+    <string name="deny_permission">Neka</string>
+</resources>

@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Inställningar";
+"done" = "Klar";
+"cancel" = "Avbryt";
+"save" = "Spara";
+"delete" = "Radera";
+"edit" = "Redigera";
+"add" = "Lägg till";
+"search" = "Sök";
+"ok" = "OK";
+"clear" = "Rensa";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Idag";
+"all_day" = "Hela dagen";
+"no_events" = "Inga händelser";
+
+/* Settings */
+"general" = "Allmänt";
+"appearance" = "Utseende";
+"edit_event" = "Redigera händelse";
+"notification" = "Meddelande";
+"support" = "Support";
+"send_feedback" = "Skicka feedback";
+"help" = "Hjälp";
+"support_practical" = "Stöd PractiCal";
+"share_app" = "Dela app";
+"write_review" = "Skriv App Store-recension";
+"donation" = "Donation";
+
+/* Appearance Settings */
+"preview" = "Förhandsvisning";
+"calendar_settings" = "Kalenderinställningar";
+"first_day_of_week" = "Första dagen i veckan";
+"theme" = "Tema";
+"accent_color" = "Accentfärg";
+"highlight" = "Markera";
+"language" = "Språk";
+"holidays" = "helgdagar";
+"saturdays" = "Lördagar";
+"sundays" = "Söndagar";
+"sat" = "Lör";
+"sun" = "Sön";
+
+/* Language */
+"system_default" = "Systemstandard";
+"search_languages" = "Sök språk";
+
+/* Week Days */
+"sunday" = "Söndag";
+"monday" = "Måndag";
+"tuesday" = "Tisdag";
+"wednesday" = "Onsdag";
+"thursday" = "Torsdag";
+"friday" = "Fredag";
+"saturday" = "Lördag";
+
+/* Themes */
+"system" = "System";
+"light" = "Ljus";
+"dark" = "Mörk";
+
+/* Event Editor */
+"new_event" = "Ny händelse";
+"event_title" = "Händelsetitel";
+"location" = "Plats";
+"url" = "URL";
+"notes" = "Anteckningar";
+"start_date" = "Start";
+"end_date" = "Slut";
+"calendar" = "Kalender";
+"alert" = "Varning";
+"repeat" = "Upprepa";
+"remove_event" = "Ta bort händelse";
+"remove_event_confirmation" = "Ta bort händelse";
+"remove_event_message" = "Är du säker på att du vill ta bort denna händelse? Denna åtgärd kan inte ångras.";
+
+/* Alerts */
+"couldnt_save_event" = "Kunde inte spara händelse";
+"try_again" = "Försök igen eller välj en annan kalender.";
+"email_not_available" = "E-post inte tillgänglig";
+"setup_mail" = "Konfigurera Mail-appen eller kontakta oss på feedback@practical.app";
+"read_only_calendar" = "Skrivskyddad kalender";
+
+/* Error Messages */
+"failed_to_delete" = "Misslyckades att radera händelsen. Försök igen.";
+"failed_to_save" = "Misslyckades att spara till vald kalender. Den kanske är skrivskyddad eller tillfälligt otillgänglig.";
+"read_only_calendar_message" = "Denna kalender kan inte ändras via iOS Kalendrar.\n\nMöjliga orsaker:\n- Prenumererad (ICS) kalender\n- Helgdagar/Födelsedagar eller annan systemkalender\n- Delad kalender utan 'Gör ändringar' rättigheter\n\nLägg till ditt Google-konto under Inställningar > Kalender > Konton och välj en redigerbar Gmail-kalender istället.";

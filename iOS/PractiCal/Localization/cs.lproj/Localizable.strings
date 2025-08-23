@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Nastavení";
+"done" = "Hotovo";
+"cancel" = "Zrušit";
+"save" = "Uložit";
+"delete" = "Odstranit";
+"edit" = "Upravit";
+"add" = "Přidat";
+"search" = "Hledat";
+"ok" = "OK";
+"clear" = "Vymazat";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Dnes";
+"all_day" = "Celý den";
+"no_events" = "Žádné události";
+
+/* Settings */
+"general" = "Obecné";
+"appearance" = "Vzhled";
+"edit_event" = "Upravit událost";
+"notification" = "Oznámení";
+"support" = "Podpora";
+"send_feedback" = "Odeslat zpětnou vazbu";
+"help" = "Nápověda";
+"support_practical" = "Podpořte PractiCal";
+"share_app" = "Sdílet aplikaci";
+"write_review" = "Napsat recenzi App Store";
+"donation" = "Dar";
+
+/* Appearance Settings */
+"preview" = "Náhled";
+"calendar_settings" = "Nastavení kalendáře";
+"first_day_of_week" = "První den v týdnu";
+"theme" = "Motiv";
+"accent_color" = "Barva zvýraznění";
+"highlight" = "Zvýraznit";
+"language" = "Jazyk";
+"holidays" = "Svátky";
+"saturdays" = "Soboty";
+"sundays" = "Neděle";
+"sat" = "So";
+"sun" = "Ne";
+
+/* Language */
+"system_default" = "Výchozí systém";
+"search_languages" = "Hledat jazyky";
+
+/* Week Days */
+"sunday" = "Neděle";
+"monday" = "Pondělí";
+"tuesday" = "Úterý";
+"wednesday" = "Středa";
+"thursday" = "Čtvrtek";
+"friday" = "Pátek";
+"saturday" = "Sobota";
+
+/* Themes */
+"system" = "Systém";
+"light" = "Světlý";
+"dark" = "Tmavý";
+
+/* Event Editor */
+"new_event" = "Nová událost";
+"event_title" = "Název události";
+"location" = "Umístění";
+"url" = "URL";
+"notes" = "Poznámky";
+"start_date" = "Začátek";
+"end_date" = "Konec";
+"calendar" = "Kalendář";
+"alert" = "Upozornění";
+"repeat" = "Opakovat";
+"remove_event" = "Odstranit událost";
+"remove_event_confirmation" = "Odstranit událost";
+"remove_event_message" = "Opravdu chcete odstranit tuto událost? Tuto akci nelze vrátit zpět.";
+
+/* Alerts */
+"couldnt_save_event" = "Událost se nepodařilo uložit";
+"try_again" = "Zkuste to znovu nebo vyberte jiný kalendář.";
+"email_not_available" = "E-mail není k dispozici";
+"setup_mail" = "Nastavte aplikaci Mail nebo nás kontaktujte na feedback@practical.app";
+"read_only_calendar" = "Kalendář pouze pro čtení";
+
+/* Error Messages */
+"failed_to_delete" = "Odstranění události se nezdařilo. Zkuste to znovu.";
+"failed_to_save" = "Uložení do vybraného kalendáře se nezdařilo. Může být pouze pro čtení nebo dočasně nedostupný.";
+"read_only_calendar_message" = "Tento kalendář nelze upravovat prostřednictvím iOS Kalendáře.\n\nMožné důvody:\n- Odebíraný (ICS) kalendář\n- Svátky/Narozeniny nebo jiný systémový kalendář\n- Sdílený kalendář bez oprávnění 'Provést změny'\n\nPřidejte svůj Google účet v Nastavení > Kalendář > Účty a vyberte editovatelný Gmail kalendář.";

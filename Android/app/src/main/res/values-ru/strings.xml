@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">Сегодня</string>
+    <string name="search">Поиск</string>
+    <string name="settings">Настройки</string>
+    <string name="calendar_selection">Календари</string>
+    <string name="add_event">Добавить событие</string>
+    
+    <!-- Month names -->
+    <string name="january">ЯНВ</string>
+    <string name="february">ФЕВ</string>
+    <string name="march">МАР</string>
+    <string name="april">АПР</string>
+    <string name="may">МАЙ</string>
+    <string name="june">ИЮН</string>
+    <string name="july">ИЮЛ</string>
+    <string name="august">АВГ</string>
+    <string name="september">СЕН</string>
+    <string name="october">ОКТ</string>
+    <string name="november">НОЯ</string>
+    <string name="december">ДЕК</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">Основные</string>
+    <string name="appearance">Внешний вид</string>
+    <string name="edit_event">Редактировать событие</string>
+    <string name="notification">Уведомление</string>
+    <string name="support">Поддержка</string>
+    <string name="send_feedback">Отправить отзыв</string>
+    <string name="help">Помощь</string>
+    <string name="support_practical">Поддержать PractiCal</string>
+    <string name="share_app">Поделиться приложением</string>
+    <string name="write_app_store_review">Написать отзыв в App Store</string>
+    <string name="donation">Пожертвование</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Календарь</string>
+    <string name="icloud_calendar">iCloud Календарь</string>
+    <string name="apple_calendar">Apple Календарь</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">Вс</string>
+    <string name="monday">Пн</string>
+    <string name="tuesday">Вт</string>
+    <string name="wednesday">Ср</string>
+    <string name="thursday">Чт</string>
+    <string name="friday">Пт</string>
+    <string name="saturday">Сб</string>
+    
+    <!-- Event details -->
+    <string name="all_day">Весь день</string>
+    <string name="no_events">Нет событий</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">Требуется разрешение календаря</string>
+    <string name="calendar_permission_message">PractiCal требуется доступ к вашему календарю для отображения и управления событиями.</string>
+    <string name="grant_permission">Предоставить разрешение</string>
+    <string name="deny_permission">Отклонить</string>
+</resources>

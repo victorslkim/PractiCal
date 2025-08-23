@@ -1,0 +1,166 @@
+/* General */
+"settings" = "Settings";
+"done" = "Done";
+"cancel" = "Cancel";
+"save" = "Save";
+"delete" = "Delete";
+"edit" = "Edit";
+"add" = "Add";
+"search" = "Search";
+"ok" = "OK";
+"clear" = "Clear";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Today";
+"all_day" = "All day";
+"no_events" = "No events";
+
+/* Settings */
+"general" = "General";
+"appearance" = "Appearance";
+"customization" = "Customization";
+"edit_event" = "Edit Event";
+"notification" = "Notification";
+"support" = "Support";
+"send_feedback" = "Send Feedback";
+"help" = "Help";
+"support_practical" = "Support PractiCal";
+"share_app" = "Share App";
+"write_review" = "Write an App Store Review";
+"donation" = "Donation";
+
+/* Appearance Settings */
+"preview" = "Preview";
+"calendar_settings" = "Calendar Settings";
+"first_day_of_week" = "First Day of Week";
+"theme" = "Theme";
+"accent_color" = "Accent Color";
+"highlight" = "Highlight";
+"language" = "Language";
+"holidays" = "Holidays";
+"saturdays" = "Saturdays";
+"sundays" = "Sundays";
+"sat" = "Sat";
+"sun" = "Sun";
+
+/* Language */
+"system_default" = "System Default";
+"search_languages" = "Search languages";
+"change_language" = "Change Language";
+"change_language_message" = "Are you sure you want to change the language to {language}? The app will restart to apply the new language.";
+"change" = "Change";
+"cancel" = "Cancel";
+
+/* Week Days */
+"sunday" = "Sunday";
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
+
+/* Themes */
+"system" = "System";
+"light" = "Light";
+"dark" = "Dark";
+
+/* Day Cell Appearance */
+"day_cell_appearance" = "Day Cell Appearance";
+"event_text_size" = "Event Text Size";
+"text_size" = "Text Size";
+"size" = "Size";
+"bold_text" = "Bold Text";
+"show_event_background" = "Show Event Background";
+"reset_to_defaults" = "Reset to Defaults";
+"day_cell_preview" = "Day Cell Preview";
+
+/* Event Row Card Customization */
+"event_row_card_customization" = "Event Row Card Customization";
+"event_row_card_preview" = "Event Row Card Preview";
+"time_format" = "Time Format";
+"24_hour_time" = "24-Hour Time";
+"event_visibility" = "Event Visibility";
+"dim_past_events" = "Dim Past Events";
+
+/* Event Editor */
+"new_event" = "New Event";
+"event_title" = "Event Title";
+"location" = "Location";
+"url" = "URL";
+"notes" = "Notes";
+"start_date" = "Start";
+"end_date" = "End";
+"calendar" = "Calendar";
+"alert" = "Alert";
+"repeat" = "Repeat";
+"remove_event" = "Remove Event";
+"remove_event_confirmation" = "Remove Event";
+"remove_event_message" = "Are you sure you want to remove this event? This action cannot be undone.";
+
+/* Alert Options */
+"none" = "None";
+"at_time_of_event" = "At time of event";
+"5_min_before" = "5 min. before";
+"15_min_before" = "15 min. before";
+"30_min_before" = "30 min. before";
+"1_hour_before" = "1 hour before";
+"1_day_before" = "1 day before";
+
+/* Alerts */
+"couldnt_save_event" = "Couldn't Save Event";
+"try_again" = "Please try again or choose a different calendar.";
+"email_not_available" = "Email Not Available";
+"setup_mail" = "Please set up Mail app or contact us at feedback@practical.app";
+"read_only_calendar" = "Read-only Calendar";
+
+/* Error Messages */
+"failed_to_delete" = "Failed to delete the event. Please try again.";
+"failed_to_save" = "Failed to save to the selected calendar. It may be read-only or temporarily unavailable.";
+"read_only_calendar_message" = "This calendar cannot be modified via iOS Calendars.\n\nPossible reasons:\n- Subscribed (ICS) calendar\n- Holidays/Birthdays or other system calendar\n- Shared calendar without 'Make changes' rights\n\nAdd your Google account under Settings > Calendar > Accounts and select a writable Gmail calendar instead.";
+
+/* Search */
+"search_events" = "Search Events";
+"enter_search_term" = "Enter a search term to find events";
+"no_results" = "No Results";
+"no_events_found" = "No events found for \"{search_text}\"";
+
+/* Event Form Sections */
+"starts" = "Starts";
+"ends" = "Ends";
+"repeat" = "Repeat";
+"calendar" = "Calendar";
+"alert" = "Alert";
+
+/* Event Details */
+"event_details" = "Event Details";
+"read_only" = "(Read-only)";
+
+/* Default Calendar */
+"default_calendar" = "Default Calendar";
+"no_default" = "No Default (Use First Available)";
+"choose_calendar" = "Choose Calendar";
+
+/* Notifications */
+"notifications" = "Notifications";
+"open_ios_settings" = "Open iOS Settings";
+"notifications_permission_message" = "Notifications require permission in iOS Settings > PractiCal > Notifications";
+
+/* Default Event Settings */
+"default_event_settings" = "Default Event Settings";
+"15_minutes" = "15 minutes";
+"30_minutes" = "30 minutes";
+"1_hour" = "1 hour";
+"2_hours" = "2 hours";
+"all_day" = "All day";
+
+/* Calendar Selection */
+"calendars" = "Calendars";
+
+/* Settings Buttons */
+"minus" = "-";
+"plus" = "+";
+
+/* Preview */
+"december_2024" = "December 2024";

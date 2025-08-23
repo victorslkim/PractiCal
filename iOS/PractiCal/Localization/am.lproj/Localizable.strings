@@ -1,0 +1,89 @@
+/* General */
+"settings" = "ቅንብሮች";
+"done" = "ተከናውኗል";
+"cancel" = "ሰርዝ";
+"save" = "ቀምጥ";
+"delete" = "ሰርዝ";
+"edit" = "አርም";
+"add" = "ጨምር";
+"search" = "ፈልግ";
+"ok" = "እሺ";
+"clear" = "አጽዳ";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "ዛሬ";
+"all_day" = "ሙሉ ቀን";
+"no_events" = "ምንም ክስተት የለም";
+
+/* Settings */
+"general" = "አጠቃላይ";
+"appearance" = "መልክ";
+"edit_event" = "ክስተት አርም";
+"notification" = "ማሳወቂያ";
+"support" = "ድጋፍ";
+"send_feedback" = "አስተያየት ላክ";
+"help" = "እርዳታ";
+"support_practical" = "PractiCal ደግፍ";
+"share_app" = "መተግበሪያ አጋራ";
+"write_review" = "በ App Store ግምገማ ጻፍ";
+"donation" = "ልገሳ";
+
+/* Appearance Settings */
+"preview" = "ቅድመ እይታ";
+"calendar_settings" = "የቀን መቁጠሪያ ቅንብሮች";
+"first_day_of_week" = "የሳምንቱ የመጀመሪያ ቀን";
+"theme" = "ጭብጥ";
+"accent_color" = "የአስገባ ቀለም";
+"highlight" = "አጉልት";
+"language" = "ቋንቋ";
+"holidays" = "በዓላት";
+"saturdays" = "ቅዳሜዎች";
+"sundays" = "እሁዶች";
+"sat" = "ቅዳሜ";
+"sun" = "እሁድ";
+
+/* Language */
+"system_default" = "የስርዓት ነባሪ";
+"search_languages" = "ቋንቋዎች ፈልግ";
+
+/* Week Days */
+"sunday" = "እሁድ";
+"monday" = "ሰኞ";
+"tuesday" = "ማክሰኞ";
+"wednesday" = "ረቡዕ";
+"thursday" = "ሀሙስ";
+"friday" = "አርብ";
+"saturday" = "ቅዳሜ";
+
+/* Themes */
+"system" = "ሲስተም";
+"light" = "ብሩህ";
+"dark" = "ጨለማ";
+
+/* Event Editor */
+"new_event" = "አዲስ ክስተት";
+"event_title" = "የክስተት ርዕስ";
+"location" = "ቦታ";
+"url" = "ዩአርኤል";
+"notes" = "ማስታወሻዎች";
+"start_date" = "መጀመሪያ";
+"end_date" = "መጨረሻ";
+"calendar" = "ቀን መቁጠሪያ";
+"alert" = "ማንቂያ";
+"repeat" = "ድገም";
+"remove_event" = "ክስተት አስወግድ";
+"remove_event_confirmation" = "ክስተት አስወግድ";
+"remove_event_message" = "ይህን ክስተት ማስወገድ እንደምትፈልግ እርግጠኛ ነህ? ይህ ተግባር መተኪያ አይደለም።";
+
+/* Alerts */
+"couldnt_save_event" = "ክስተቱን ማስቀመጥ አልተቻለም";
+"try_again" = "እንደገና ሞክር ወይም የተለየ ቀን መቁጠሪያ ምረጥ።";
+"email_not_available" = "ኢሜይል አይገኝም";
+"setup_mail" = "የ Mail መተግበሪያን አዘጋጅ ወይም በ feedback@practical.app አግኘን";
+"read_only_calendar" = "ንባብ ብቻ ቀን መቁጠሪያ";
+
+/* Error Messages */
+"failed_to_delete" = "ክስተቱን ማጥፋት አልተሳካም። እንደገና ሞክር።";
+"failed_to_save" = "በተመረጠው ቀን መቁጠሪያ ማስቀመጥ አልተሳካም። ንባብ ብቻ ሊሆን ወይም ጊዜያዊ ላይገኝ ይችላል።";
+"read_only_calendar_message" = "ይህ ቀን መቁጠሪያ በ iOS ቀን መቁጠሪያዎች ሊሻሻል አይችልም።\n\nሊሆኑ የሚችሉ ምክንያቶች:\n- የተመዘገበ (ICS) ቀን መቁጠሪያ\n- በዓላት/የልደት ቀናት ወይም ሌላ የስርዓት ቀን መቁጠሪያ\n- ያለ 'ለውጦች አድርግ' መብት የተጋራ ቀን መቁጠሪያ\n\nየ Google መለያዎትን በቅንብሮች > ቀን መቁጠሪያ > መለያዎች ስር ጨምር እና በምትኩ የሚስተካከል Gmail ቀን መቁጠሪያ ምረጥ።";

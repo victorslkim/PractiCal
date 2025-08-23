@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">Oggi</string>
+    <string name="search">Cerca</string>
+    <string name="settings">Impostazioni</string>
+    <string name="calendar_selection">Calendari</string>
+    <string name="add_event">Aggiungi evento</string>
+    
+    <!-- Month names -->
+    <string name="january">GEN</string>
+    <string name="february">FEB</string>
+    <string name="march">MAR</string>
+    <string name="april">APR</string>
+    <string name="may">MAG</string>
+    <string name="june">GIU</string>
+    <string name="july">LUG</string>
+    <string name="august">AGO</string>
+    <string name="september">SET</string>
+    <string name="october">OTT</string>
+    <string name="november">NOV</string>
+    <string name="december">DIC</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">Generale</string>
+    <string name="appearance">Aspetto</string>
+    <string name="edit_event">Modifica evento</string>
+    <string name="notification">Notifica</string>
+    <string name="support">Supporto</string>
+    <string name="send_feedback">Invia feedback</string>
+    <string name="help">Aiuto</string>
+    <string name="support_practical">Supporta PractiCal</string>
+    <string name="share_app">Condividi app</string>
+    <string name="write_app_store_review">Scrivi recensione App Store</string>
+    <string name="donation">Donazione</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Calendar</string>
+    <string name="icloud_calendar">iCloud Calendar</string>
+    <string name="apple_calendar">Apple Calendar</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">Dom</string>
+    <string name="monday">Lun</string>
+    <string name="tuesday">Mar</string>
+    <string name="wednesday">Mer</string>
+    <string name="thursday">Gio</string>
+    <string name="friday">Ven</string>
+    <string name="saturday">Sab</string>
+    
+    <!-- Event details -->
+    <string name="all_day">Tutto il giorno</string>
+    <string name="no_events">Nessun evento</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">Autorizzazione calendario richiesta</string>
+    <string name="calendar_permission_message">PractiCal ha bisogno di accedere al tuo calendario per visualizzare e gestire i tuoi eventi.</string>
+    <string name="grant_permission">Concedi autorizzazione</string>
+    <string name="deny_permission">Rifiuta</string>
+</resources>

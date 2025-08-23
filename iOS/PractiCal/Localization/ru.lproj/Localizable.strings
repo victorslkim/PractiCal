@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Настройки";
+"done" = "Готово";
+"cancel" = "Отмена";
+"save" = "Сохранить";
+"delete" = "Удалить";
+"edit" = "Редактировать";
+"add" = "Добавить";
+"search" = "Поиск";
+"ok" = "ОК";
+"clear" = "Очистить";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Сегодня";
+"all_day" = "Весь день";
+"no_events" = "Нет событий";
+
+/* Settings */
+"general" = "Основные";
+"appearance" = "Внешний вид";
+"edit_event" = "Редактировать событие";
+"notification" = "Уведомление";
+"support" = "Поддержка";
+"send_feedback" = "Отправить отзыв";
+"help" = "Помощь";
+"support_practical" = "Поддержать PractiCal";
+"share_app" = "Поделиться приложением";
+"write_review" = "Написать отзыв в App Store";
+"donation" = "Пожертвование";
+
+/* Appearance Settings */
+"preview" = "Предварительный просмотр";
+"calendar_settings" = "Настройки календаря";
+"first_day_of_week" = "Первый день недели";
+"theme" = "Тема";
+"accent_color" = "Цвет акцента";
+"highlight" = "Выделить";
+"language" = "Язык";
+"holidays" = "Праздники";
+"saturdays" = "Субботы";
+"sundays" = "Воскресенья";
+"sat" = "Сб";
+"sun" = "Вс";
+
+/* Language */
+"system_default" = "По умолчанию системы";
+"search_languages" = "Поиск языков";
+
+/* Week Days */
+"sunday" = "Воскресенье";
+"monday" = "Понедельник";
+"tuesday" = "Вторник";
+"wednesday" = "Среда";
+"thursday" = "Четверг";
+"friday" = "Пятница";
+"saturday" = "Суббота";
+
+/* Themes */
+"system" = "Система";
+"light" = "Светлая";
+"dark" = "Темная";
+
+/* Event Editor */
+"new_event" = "Новое событие";
+"event_title" = "Название события";
+"location" = "Место";
+"url" = "URL";
+"notes" = "Заметки";
+"start_date" = "Начало";
+"end_date" = "Конец";
+"calendar" = "Календарь";
+"alert" = "Напоминание";
+"repeat" = "Повторить";
+"remove_event" = "Удалить событие";
+"remove_event_confirmation" = "Удалить событие";
+"remove_event_message" = "Вы уверены, что хотите удалить это событие? Это действие нельзя отменить.";
+
+/* Alerts */
+"couldnt_save_event" = "Не удалось сохранить событие";
+"try_again" = "Попробуйте еще раз или выберите другой календарь.";
+"email_not_available" = "Email недоступен";
+"setup_mail" = "Настройте приложение Почта или свяжитесь с нами по адресу feedback@practical.app";
+"read_only_calendar" = "Календарь только для чтения";
+
+/* Error Messages */
+"failed_to_delete" = "Не удалось удалить событие. Попробуйте еще раз.";
+"failed_to_save" = "Не удалось сохранить в выбранный календарь. Он может быть доступен только для чтения или временно недоступен.";
+"read_only_calendar_message" = "Этот календарь нельзя изменить через Календари iOS.\n\nВозможные причины:\n- Подписанный (ICS) календарь\n- Праздники/Дни рождения или другой системный календарь\n- Общий календарь без прав 'Вносить изменения'\n\nДобавьте свой аккаунт Google в Настройки > Календарь > Учетные записи и выберите редактируемый календарь Gmail.";

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">Tänään</string>
+    <string name="search">Haku</string>
+    <string name="settings">Asetukset</string>
+    <string name="calendar_selection">Kalenterit</string>
+    <string name="add_event">Lisää tapahtuma</string>
+    
+    <!-- Month names -->
+    <string name="january">TAM</string>
+    <string name="february">HEL</string>
+    <string name="march">MAA</string>
+    <string name="april">HUH</string>
+    <string name="may">TOU</string>
+    <string name="june">KES</string>
+    <string name="july">HEI</string>
+    <string name="august">ELO</string>
+    <string name="september">SYY</string>
+    <string name="october">LOK</string>
+    <string name="november">MAR</string>
+    <string name="december">JOU</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">Yleiset</string>
+    <string name="appearance">Ulkoasu</string>
+    <string name="edit_event">Muokkaa tapahtumaa</string>
+    <string name="notification">Ilmoitus</string>
+    <string name="support">Tuki</string>
+    <string name="send_feedback">Lähetä palautetta</string>
+    <string name="help">Ohje</string>
+    <string name="support_practical">Tue PractiCalia</string>
+    <string name="share_app">Jaa sovellus</string>
+    <string name="write_app_store_review">Kirjoita App Store arvostelu</string>
+    <string name="donation">Lahjoitus</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Kalenteri</string>
+    <string name="icloud_calendar">iCloud Kalenteri</string>
+    <string name="apple_calendar">Apple Kalenteri</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">Su</string>
+    <string name="monday">Ma</string>
+    <string name="tuesday">Ti</string>
+    <string name="wednesday">Ke</string>
+    <string name="thursday">To</string>
+    <string name="friday">Pe</string>
+    <string name="saturday">La</string>
+    
+    <!-- Event details -->
+    <string name="all_day">Koko päivä</string>
+    <string name="no_events">Ei tapahtumia</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">Kalenterilupa vaaditaan</string>
+    <string name="calendar_permission_message">PractiCal tarvitsee pääsyn kalenteriisi näyttääkseen ja hallitakseen tapahtumia.</string>
+    <string name="grant_permission">Anna lupa</string>
+    <string name="deny_permission">Kieltäydy</string>
+</resources>

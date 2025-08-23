@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Ustawienia";
+"done" = "Gotowe";
+"cancel" = "Anuluj";
+"save" = "Zapisz";
+"delete" = "Usuń";
+"edit" = "Edytuj";
+"add" = "Dodaj";
+"search" = "Szukaj";
+"ok" = "OK";
+"clear" = "Wyczyść";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Dzisiaj";
+"all_day" = "Cały dzień";
+"no_events" = "Brak wydarzeń";
+
+/* Settings */
+"general" = "Ogólne";
+"appearance" = "Wygląd";
+"edit_event" = "Edytuj wydarzenie";
+"notification" = "Powiadomienie";
+"support" = "Wsparcie";
+"send_feedback" = "Wyślij opinię";
+"help" = "Pomoc";
+"support_practical" = "Wspieraj PractiCal";
+"share_app" = "Udostępnij aplikację";
+"write_review" = "Napisz recenzję w App Store";
+"donation" = "Darowizna";
+
+/* Appearance Settings */
+"preview" = "Podgląd";
+"calendar_settings" = "Ustawienia kalendarza";
+"first_day_of_week" = "Pierwszy dzień tygodnia";
+"theme" = "Motyw";
+"accent_color" = "Kolor akcentu";
+"highlight" = "Podświetl";
+"language" = "Język";
+"holidays" = "Święta";
+"saturdays" = "Soboty";
+"sundays" = "Niedziele";
+"sat" = "Sob";
+"sun" = "Nie";
+
+/* Language */
+"system_default" = "Domyślny systemu";
+"search_languages" = "Szukaj języków";
+
+/* Week Days */
+"sunday" = "Niedziela";
+"monday" = "Poniedziałek";
+"tuesday" = "Wtorek";
+"wednesday" = "Środa";
+"thursday" = "Czwartek";
+"friday" = "Piątek";
+"saturday" = "Sobota";
+
+/* Themes */
+"system" = "Systemowy";
+"light" = "Jasny";
+"dark" = "Ciemny";
+
+/* Event Editor */
+"new_event" = "Nowe wydarzenie";
+"event_title" = "Tytuł wydarzenia";
+"location" = "Lokalizacja";
+"url" = "URL";
+"notes" = "Notatki";
+"start_date" = "Początek";
+"end_date" = "Koniec";
+"calendar" = "Kalendarz";
+"alert" = "Alarm";
+"repeat" = "Powtarzaj";
+"remove_event" = "Usuń wydarzenie";
+"remove_event_confirmation" = "Usuń wydarzenie";
+"remove_event_message" = "Czy na pewno chcesz usunąć to wydarzenie? Tej czynności nie można cofnąć.";
+
+/* Alerts */
+"couldnt_save_event" = "Nie można zapisać wydarzenia";
+"try_again" = "Spróbuj ponownie lub wybierz inny kalendarz.";
+"email_not_available" = "E-mail niedostępny";
+"setup_mail" = "Skonfiguruj aplikację Mail lub skontaktuj się z nami pod adresem feedback@practical.app";
+"read_only_calendar" = "Kalendarz tylko do odczytu";
+
+/* Error Messages */
+"failed_to_delete" = "Nie udało się usunąć wydarzenia. Spróbuj ponownie.";
+"failed_to_save" = "Nie udało się zapisać w wybranym kalendarzu. Może być tylko do odczytu lub tymczasowo niedostępny.";
+"read_only_calendar_message" = "Ten kalendarz nie może być modyfikowany przez Kalendarze iOS.\n\nMożliwe przyczyny:\n- Subskrybowany kalendarz (ICS)\n- Święta/Urodziny lub inny kalendarz systemowy\n- Kalendarz udostępniony bez uprawnień 'Wprowadzanie zmian'\n\nDodaj swoje konto Google w Ustawienia > Kalendarz > Konta i wybierz edytowalny kalendarz Gmail.";

@@ -1,0 +1,22 @@
+# PractiCal iOS Build Configuration Template
+# Copy this file to 'build.config' and fill in your Apple Developer details
+
+# Apple Developer Team ID (required)
+# Find this in your Apple Developer account or in Xcode under Signing & Capabilities
+TEAM_ID="YOUR_TEAM_ID_HERE"
+
+# App Bundle Identifier (required)
+# Must match your Apple Developer provisioning profile
+BUNDLE_ID="com.yourcompany.PractiCal"
+
+# App Name (optional - defaults to PractiCal)
+APP_NAME="PractiCal"
+
+# Target iOS Simulator (optional - defaults to iPhone 16 Pro)
+SIMULATOR_NAME="iPhone 16 Pro"
+
+# Specific Device ID (optional - leave empty for auto-detection)
+# TARGET_DEVICE_ID=""
+
+# Code Signing Identity (optional - leave empty for auto-detection)
+# CODE_SIGN_IDENTITY=""

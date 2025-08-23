@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Asetukset";
+"done" = "Valmis";
+"cancel" = "Peruuta";
+"save" = "Tallenna";
+"delete" = "Poista";
+"edit" = "Muokkaa";
+"add" = "Lisää";
+"search" = "Etsi";
+"ok" = "OK";
+"clear" = "Tyhjennä";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Tänään";
+"all_day" = "Koko päivä";
+"no_events" = "Ei tapahtumia";
+
+/* Settings */
+"general" = "Yleinen";
+"appearance" = "Ulkoasu";
+"edit_event" = "Muokkaa tapahtumaa";
+"notification" = "Ilmoitus";
+"support" = "Tuki";
+"send_feedback" = "Lähetä palautetta";
+"help" = "Ohje";
+"support_practical" = "Tue PractiCalia";
+"share_app" = "Jaa sovellus";
+"write_review" = "Kirjoita App Store arvostelu";
+"donation" = "Lahjoitus";
+
+/* Appearance Settings */
+"preview" = "Esikatselu";
+"calendar_settings" = "Kalenteriasetukset";
+"first_day_of_week" = "Viikon ensimmäinen päivä";
+"theme" = "Teema";
+"accent_color" = "Korostusväri";
+"highlight" = "Korosta";
+"language" = "Kieli";
+"holidays" = "Pyhäpäivät";
+"saturdays" = "Lauantait";
+"sundays" = "Sunnuntait";
+"sat" = "La";
+"sun" = "Su";
+
+/* Language */
+"system_default" = "Järjestelmän oletus";
+"search_languages" = "Etsi kieliä";
+
+/* Week Days */
+"sunday" = "Sunnuntai";
+"monday" = "Maanantai";
+"tuesday" = "Tiistai";
+"wednesday" = "Keskiviikko";
+"thursday" = "Torstai";
+"friday" = "Perjantai";
+"saturday" = "Lauantai";
+
+/* Themes */
+"system" = "Järjestelmä";
+"light" = "Vaalea";
+"dark" = "Tumma";
+
+/* Event Editor */
+"new_event" = "Uusi tapahtuma";
+"event_title" = "Tapahtuman otsikko";
+"location" = "Sijainti";
+"url" = "URL";
+"notes" = "Muistiinpanot";
+"start_date" = "Alku";
+"end_date" = "Loppu";
+"calendar" = "Kalenteri";
+"alert" = "Hälytys";
+"repeat" = "Toista";
+"remove_event" = "Poista tapahtuma";
+"remove_event_confirmation" = "Poista tapahtuma";
+"remove_event_message" = "Oletko varma, että haluat poistaa tämän tapahtuman? Tätä toimintoa ei voi perua.";
+
+/* Alerts */
+"couldnt_save_event" = "Tapahtumaa ei voitu tallentaa";
+"try_again" = "Yritä uudelleen tai valitse eri kalenteri.";
+"email_not_available" = "Sähköposti ei ole käytettävissä";
+"setup_mail" = "Määritä Mail-sovellus tai ota yhteyttä osoitteeseen feedback@practical.app";
+"read_only_calendar" = "Vain luku -kalenteri";
+
+/* Error Messages */
+"failed_to_delete" = "Tapahtuman poistaminen epäonnistui. Yritä uudelleen.";
+"failed_to_save" = "Tallentaminen valittuun kalenteriin epäonnistui. Se saattaa olla vain luku -tilassa tai väliaikaisesti käyttämätön.";
+"read_only_calendar_message" = "Tätä kalenteria ei voi muokata iOS Kalenterien kautta.\n\nMahdollisia syitä:\n- Tilattu (ICS) kalenteri\n- Pyhäpäivät/Syntymäpäivät tai muu järjestelmäkalenteri\n- Jaettu kalenteri ilman 'Tee muutoksia' oikeuksia\n\nLisää Google-tilisi kohdassa Asetukset > Kalenteri > Tilit ja valitse muokattava Gmail-kalenteri.";

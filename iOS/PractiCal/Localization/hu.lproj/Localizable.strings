@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Beállítások";
+"done" = "Kész";
+"cancel" = "Mégse";
+"save" = "Mentés";
+"delete" = "Törlés";
+"edit" = "Szerkesztés";
+"add" = "Hozzáadás";
+"search" = "Keresés";
+"ok" = "OK";
+"clear" = "Törlés";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Ma";
+"all_day" = "Egész nap";
+"no_events" = "Nincsenek események";
+
+/* Settings */
+"general" = "Általános";
+"appearance" = "Megjelenés";
+"edit_event" = "Esemény szerkesztése";
+"notification" = "Értesítés";
+"support" = "Támogatás";
+"send_feedback" = "Visszajelzés küldése";
+"help" = "Súgó";
+"support_practical" = "PractiCal támogatása";
+"share_app" = "Alkalmazás megosztása";
+"write_review" = "App Store értékelés írása";
+"donation" = "Adományozás";
+
+/* Appearance Settings */
+"preview" = "Előnézet";
+"calendar_settings" = "Naptár beállítások";
+"first_day_of_week" = "A hét első napja";
+"theme" = "Téma";
+"accent_color" = "Kiemelő szín";
+"highlight" = "Kiemelés";
+"language" = "Nyelv";
+"holidays" = "Ünnepek";
+"saturdays" = "Szombatok";
+"sundays" = "Vasárnapok";
+"sat" = "Szo";
+"sun" = "Vas";
+
+/* Language */
+"system_default" = "Rendszer alapértelmezett";
+"search_languages" = "Nyelvek keresése";
+
+/* Week Days */
+"sunday" = "Vasárnap";
+"monday" = "Hétfő";
+"tuesday" = "Kedd";
+"wednesday" = "Szerda";
+"thursday" = "Csütörtök";
+"friday" = "Péntek";
+"saturday" = "Szombat";
+
+/* Themes */
+"system" = "Rendszer";
+"light" = "Világos";
+"dark" = "Sötét";
+
+/* Event Editor */
+"new_event" = "Új esemény";
+"event_title" = "Esemény címe";
+"location" = "Helyszín";
+"url" = "URL";
+"notes" = "Jegyzetek";
+"start_date" = "Kezdés";
+"end_date" = "Befejezés";
+"calendar" = "Naptár";
+"alert" = "Figyelmeztetés";
+"repeat" = "Ismétlés";
+"remove_event" = "Esemény eltávolítása";
+"remove_event_confirmation" = "Esemény eltávolítása";
+"remove_event_message" = "Biztosan el szeretné távolítani ezt az eseményt? Ez a művelet nem vonható vissza.";
+
+/* Alerts */
+"couldnt_save_event" = "Az esemény mentése sikertelen";
+"try_again" = "Próbálja újra vagy válasszon másik naptárt.";
+"email_not_available" = "Email nem elérhető";
+"setup_mail" = "Állítsa be a Mail alkalmazást vagy lépjen kapcsolatba velünk a feedback@practical.app címen";
+"read_only_calendar" = "Csak olvasható naptár";
+
+/* Error Messages */
+"failed_to_delete" = "Az esemény törlése sikertelen. Próbálja újra.";
+"failed_to_save" = "A kiválasztott naptárba mentés sikertelen. Lehet, hogy csak olvasható vagy ideiglenesen nem elérhető.";
+"read_only_calendar_message" = "Ez a naptár nem módosítható az iOS Naptárak alkalmazáson keresztül.\n\nLehetséges okok:\n- Feliratkozott (ICS) naptár\n- Ünnepek/Születésnapok vagy más rendszernaptár\n- Megosztott naptár 'Módosítások végzése' jogosultság nélkül\n\nAdja hozzá Google fiókját a Beállítások > Naptár > Fiókok alatt, és válasszon szerkeszthető Gmail naptárt.";

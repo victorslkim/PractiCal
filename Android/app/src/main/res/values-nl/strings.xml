@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">Vandaag</string>
+    <string name="search">Zoeken</string>
+    <string name="settings">Instellingen</string>
+    <string name="calendar_selection">Kalenders</string>
+    <string name="add_event">Gebeurtenis toevoegen</string>
+    
+    <!-- Month names -->
+    <string name="january">JAN</string>
+    <string name="february">FEB</string>
+    <string name="march">MRT</string>
+    <string name="april">APR</string>
+    <string name="may">MEI</string>
+    <string name="june">JUN</string>
+    <string name="july">JUL</string>
+    <string name="august">AUG</string>
+    <string name="september">SEP</string>
+    <string name="october">OKT</string>
+    <string name="november">NOV</string>
+    <string name="december">DEC</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">Algemeen</string>
+    <string name="appearance">Weergave</string>
+    <string name="edit_event">Gebeurtenis bewerken</string>
+    <string name="notification">Melding</string>
+    <string name="support">Ondersteuning</string>
+    <string name="send_feedback">Feedback verzenden</string>
+    <string name="help">Help</string>
+    <string name="support_practical">PractiCal ondersteunen</string>
+    <string name="share_app">App delen</string>
+    <string name="write_app_store_review">App Store beoordeling schrijven</string>
+    <string name="donation">Donatie</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Calendar</string>
+    <string name="icloud_calendar">iCloud Calendar</string>
+    <string name="apple_calendar">Apple Calendar</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">Zo</string>
+    <string name="monday">Ma</string>
+    <string name="tuesday">Di</string>
+    <string name="wednesday">Wo</string>
+    <string name="thursday">Do</string>
+    <string name="friday">Vr</string>
+    <string name="saturday">Za</string>
+    
+    <!-- Event details -->
+    <string name="all_day">Hele dag</string>
+    <string name="no_events">Geen gebeurtenissen</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">Kalender toestemming vereist</string>
+    <string name="calendar_permission_message">PractiCal heeft toegang tot uw kalender nodig om uw gebeurtenissen weer te geven en te beheren.</string>
+    <string name="grant_permission">Toestemming verlenen</string>
+    <string name="deny_permission">Weigeren</string>
+</resources>

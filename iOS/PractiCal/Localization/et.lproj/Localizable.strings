@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Seaded";
+"done" = "Valmis";
+"cancel" = "Tühista";
+"save" = "Salvesta";
+"delete" = "Kustuta";
+"edit" = "Muuda";
+"add" = "Lisa";
+"search" = "Otsi";
+"ok" = "OK";
+"clear" = "Tühjenda";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Täna";
+"all_day" = "Kogu päev";
+"no_events" = "Sündmusi pole";
+
+/* Settings */
+"general" = "Üldine";
+"appearance" = "Välimus";
+"edit_event" = "Muuda sündmust";
+"notification" = "Teavitus";
+"support" = "Tugi";
+"send_feedback" = "Saada tagasisidet";
+"help" = "Abi";
+"support_practical" = "Toeta PractiCal'i";
+"share_app" = "Jaga rakendust";
+"write_review" = "Kirjuta App Store'i arvustus";
+"donation" = "Annetus";
+
+/* Appearance Settings */
+"preview" = "Eelvaade";
+"calendar_settings" = "Kalendri seaded";
+"first_day_of_week" = "Nädala esimene päev";
+"theme" = "Teema";
+"accent_color" = "Rõhuvärv";
+"highlight" = "Tõsta esile";
+"language" = "Keel";
+"holidays" = "Pühad";
+"saturdays" = "Laupäevad";
+"sundays" = "Pühapäevad";
+"sat" = "Lau";
+"sun" = "Püh";
+
+/* Language */
+"system_default" = "Süsteemi vaikeväärtus";
+"search_languages" = "Otsi keeli";
+
+/* Week Days */
+"sunday" = "Pühapäev";
+"monday" = "Esmaspäev";
+"tuesday" = "Teisipäev";
+"wednesday" = "Kolmapäev";
+"thursday" = "Neljapäev";
+"friday" = "Reede";
+"saturday" = "Laupäev";
+
+/* Themes */
+"system" = "Süsteem";
+"light" = "Hele";
+"dark" = "Tume";
+
+/* Event Editor */
+"new_event" = "Uus sündmus";
+"event_title" = "Sündmuse pealkiri";
+"location" = "Asukoht";
+"url" = "URL";
+"notes" = "Märkmed";
+"start_date" = "Algus";
+"end_date" = "Lõpp";
+"calendar" = "Kalender";
+"alert" = "Hoiatus";
+"repeat" = "Korda";
+"remove_event" = "Eemalda sündmus";
+"remove_event_confirmation" = "Eemalda sündmus";
+"remove_event_message" = "Kas olete kindel, et soovite selle sündmuse eemaldada? Seda toimingut ei saa tagasi võtta.";
+
+/* Alerts */
+"couldnt_save_event" = "Sündmust ei õnnestunud salvestada";
+"try_again" = "Proovige uuesti või valige teine kalender.";
+"email_not_available" = "E-post pole saadaval";
+"setup_mail" = "Seadistage Mail rakendus või võtke meiega ühendust aadressil feedback@practical.app";
+"read_only_calendar" = "Ainult lugemiseks kalender";
+
+/* Error Messages */
+"failed_to_delete" = "Sündmuse kustutamine ebaõnnestus. Proovige uuesti.";
+"failed_to_save" = "Valitud kalendrisse salvestamine ebaõnnestus. See võib olla ainult lugemiseks või ajutiselt kättesaamatu.";
+"read_only_calendar_message" = "Seda kalendrit ei saa muuta iOS Kalendrite kaudu.\n\nVõimalikud põhjused:\n- Tellitud (ICS) kalender\n- Pühad/Sünnipäevad või muu süsteemi kalender\n- Jagatud kalender ilma 'Muudatuste tegemise' õigusteta\n\nLisage oma Google konto Seaded > Kalender > Kontod alla ja valige redigeeritav Gmail kalender.";

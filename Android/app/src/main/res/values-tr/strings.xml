@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">Bugün</string>
+    <string name="search">Ara</string>
+    <string name="settings">Ayarlar</string>
+    <string name="calendar_selection">Takvimler</string>
+    <string name="add_event">Etkinlik ekle</string>
+    
+    <!-- Month names -->
+    <string name="january">OCA</string>
+    <string name="february">ŞUB</string>
+    <string name="march">MAR</string>
+    <string name="april">NİS</string>
+    <string name="may">MAY</string>
+    <string name="june">HAZ</string>
+    <string name="july">TEM</string>
+    <string name="august">AĞU</string>
+    <string name="september">EYL</string>
+    <string name="october">EKİ</string>
+    <string name="november">KAS</string>
+    <string name="december">ARA</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">Genel</string>
+    <string name="appearance">Görünüm</string>
+    <string name="edit_event">Etkinliği düzenle</string>
+    <string name="notification">Bildirim</string>
+    <string name="support">Destek</string>
+    <string name="send_feedback">Geri bildirim gönder</string>
+    <string name="help">Yardım</string>
+    <string name="support_practical">PractiCal\'ı destekle</string>
+    <string name="share_app">Uygulamayı paylaş</string>
+    <string name="write_app_store_review">App Store yorumu yaz</string>
+    <string name="donation">Bağış</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google Takvim</string>
+    <string name="icloud_calendar">iCloud Takvim</string>
+    <string name="apple_calendar">Apple Takvim</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">Paz</string>
+    <string name="monday">Pzt</string>
+    <string name="tuesday">Sal</string>
+    <string name="wednesday">Çar</string>
+    <string name="thursday">Per</string>
+    <string name="friday">Cum</string>
+    <string name="saturday">Cmt</string>
+    
+    <!-- Event details -->
+    <string name="all_day">Tüm gün</string>
+    <string name="no_events">Etkinlik yok</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">Takvim izni gerekli</string>
+    <string name="calendar_permission_message">PractiCal etkinliklerinizi görüntülemek ve yönetmek için takviminize erişim gerektirir.</string>
+    <string name="grant_permission">İzin ver</string>
+    <string name="deny_permission">Reddet</string>
+</resources>

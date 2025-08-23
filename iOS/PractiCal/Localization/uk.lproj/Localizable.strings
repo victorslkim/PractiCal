@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Налаштування";
+"done" = "Готово";
+"cancel" = "Скасувати";
+"save" = "Зберегти";
+"delete" = "Видалити";
+"edit" = "Редагувати";
+"add" = "Додати";
+"search" = "Пошук";
+"ok" = "ОК";
+"clear" = "Очистити";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Сьогодні";
+"all_day" = "Весь день";
+"no_events" = "Немає подій";
+
+/* Settings */
+"general" = "Загальні";
+"appearance" = "Зовнішній вигляд";
+"edit_event" = "Редагувати подію";
+"notification" = "Сповіщення";
+"support" = "Підтримка";
+"send_feedback" = "Надіслати відгук";
+"help" = "Допомога";
+"support_practical" = "Підтримати PractiCal";
+"share_app" = "Поділитися додатком";
+"write_review" = "Написати відгук в App Store";
+"donation" = "Пожертва";
+
+/* Appearance Settings */
+"preview" = "Попередній перегляд";
+"calendar_settings" = "Налаштування календаря";
+"first_day_of_week" = "Перший день тижня";
+"theme" = "Тема";
+"accent_color" = "Колір акценту";
+"highlight" = "Виділити";
+"language" = "Мова";
+"holidays" = "Свята";
+"saturdays" = "Суботи";
+"sundays" = "Неділі";
+"sat" = "Сб";
+"sun" = "Нд";
+
+/* Language */
+"system_default" = "За замовчуванням системи";
+"search_languages" = "Пошук мов";
+
+/* Week Days */
+"sunday" = "Неділя";
+"monday" = "Понеділок";
+"tuesday" = "Вівторок";
+"wednesday" = "Середа";
+"thursday" = "Четвер";
+"friday" = "П'ятниця";
+"saturday" = "Субота";
+
+/* Themes */
+"system" = "Система";
+"light" = "Світла";
+"dark" = "Темна";
+
+/* Event Editor */
+"new_event" = "Нова подія";
+"event_title" = "Назва події";
+"location" = "Місце";
+"url" = "URL";
+"notes" = "Нотатки";
+"start_date" = "Початок";
+"end_date" = "Кінець";
+"calendar" = "Календар";
+"alert" = "Нагадування";
+"repeat" = "Повторити";
+"remove_event" = "Видалити подію";
+"remove_event_confirmation" = "Видалити подію";
+"remove_event_message" = "Ви впевнені, що хочете видалити цю подію? Цю дію неможливо скасувати.";
+
+/* Alerts */
+"couldnt_save_event" = "Не вдалося зберегти подію";
+"try_again" = "Спробуйте ще раз або виберіть інший календар.";
+"email_not_available" = "Email недоступний";
+"setup_mail" = "Налаштуйте додаток Пошта або зв'яжіться з нами за адресою feedback@practical.app";
+"read_only_calendar" = "Календар тільки для читання";
+
+/* Error Messages */
+"failed_to_delete" = "Не вдалося видалити подію. Спробуйте ще раз.";
+"failed_to_save" = "Не вдалося зберегти у вибраний календар. Він може бути доступним лише для читання або тимчасово недоступний.";
+"read_only_calendar_message" = "Цей календар неможливо змінити через iOS Календарі.\n\nМожливі причини:\n- Підписаний (ICS) календар\n- Свята/Дні народження або інший системний календар\n- Спільний календар без прав 'Внесення змін'\n\nДодайте свій обліковий запис Google в Налаштування > Календар > Облікові записи та виберіть редагований календар Gmail.";

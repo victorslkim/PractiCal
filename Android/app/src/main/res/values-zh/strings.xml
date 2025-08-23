@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PractiCal</string>
+    
+    <!-- Main Screen -->
+    <string name="today">今天</string>
+    <string name="search">搜索</string>
+    <string name="settings">设置</string>
+    <string name="calendar_selection">日历</string>
+    <string name="add_event">添加事件</string>
+    
+    <!-- Month names -->
+    <string name="january">1月</string>
+    <string name="february">2月</string>
+    <string name="march">3月</string>
+    <string name="april">4月</string>
+    <string name="may">5月</string>
+    <string name="june">6月</string>
+    <string name="july">7月</string>
+    <string name="august">8月</string>
+    <string name="september">9月</string>
+    <string name="october">10月</string>
+    <string name="november">11月</string>
+    <string name="december">12月</string>
+    
+    <!-- Settings Screen -->
+    <string name="general">通用</string>
+    <string name="appearance">外观</string>
+    <string name="edit_event">编辑事件</string>
+    <string name="notification">通知</string>
+    <string name="support">支持</string>
+    <string name="send_feedback">发送反馈</string>
+    <string name="help">帮助</string>
+    <string name="support_practical">支持 PractiCal</string>
+    <string name="share_app">分享应用</string>
+    <string name="write_app_store_review">撰写 App Store 评价</string>
+    <string name="donation">捐赠</string>
+    
+    <!-- Calendar Selection -->
+    <string name="google_calendar">Google 日历</string>
+    <string name="icloud_calendar">iCloud 日历</string>
+    <string name="apple_calendar">Apple 日历</string>
+    
+    <!-- Days of the week -->
+    <string name="sunday">日</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+    
+    <!-- Event details -->
+    <string name="all_day">全天</string>
+    <string name="no_events">无事件</string>
+    
+    <!-- Permissions -->
+    <string name="calendar_permission_title">需要日历权限</string>
+    <string name="calendar_permission_message">PractiCal 需要访问您的日历以显示和管理您的事件。</string>
+    <string name="grant_permission">授予权限</string>
+    <string name="deny_permission">拒绝</string>
+</resources>

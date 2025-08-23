@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Configuració";
+"done" = "Fet";
+"cancel" = "Cancel·lar";
+"save" = "Desar";
+"delete" = "Suprimir";
+"edit" = "Editar";
+"add" = "Afegir";
+"search" = "Cercar";
+"ok" = "D'acord";
+"clear" = "Esborrar";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Avui";
+"all_day" = "Tot el dia";
+"no_events" = "Cap esdeveniment";
+
+/* Settings */
+"general" = "General";
+"appearance" = "Aparença";
+"edit_event" = "Editar esdeveniment";
+"notification" = "Notificació";
+"support" = "Suport";
+"send_feedback" = "Enviar comentaris";
+"help" = "Ajuda";
+"support_practical" = "Suportar PractiCal";
+"share_app" = "Compartir l'app";
+"write_review" = "Escriure una ressenya a l'App Store";
+"donation" = "Donació";
+
+/* Appearance Settings */
+"preview" = "Vista prèvia";
+"calendar_settings" = "Configuració del calendari";
+"first_day_of_week" = "Primer dia de la setmana";
+"theme" = "Tema";
+"accent_color" = "Color d'accent";
+"highlight" = "Ressaltar";
+"language" = "Idioma";
+"holidays" = "Festius";
+"saturdays" = "Dissabtes";
+"sundays" = "Diumenges";
+"sat" = "Dis";
+"sun" = "Diu";
+
+/* Language */
+"system_default" = "Per defecte del sistema";
+"search_languages" = "Cercar idiomes";
+
+/* Week Days */
+"sunday" = "Diumenge";
+"monday" = "Dilluns";
+"tuesday" = "Dimarts";
+"wednesday" = "Dimecres";
+"thursday" = "Dijous";
+"friday" = "Divendres";
+"saturday" = "Dissabte";
+
+/* Themes */
+"system" = "Sistema";
+"light" = "Clar";
+"dark" = "Fosc";
+
+/* Event Editor */
+"new_event" = "Nou esdeveniment";
+"event_title" = "Títol de l'esdeveniment";
+"location" = "Ubicació";
+"url" = "URL";
+"notes" = "Notes";
+"start_date" = "Inici";
+"end_date" = "Final";
+"calendar" = "Calendari";
+"alert" = "Alerta";
+"repeat" = "Repetir";
+"remove_event" = "Eliminar esdeveniment";
+"remove_event_confirmation" = "Eliminar esdeveniment";
+"remove_event_message" = "Esteu segur que voleu eliminar aquest esdeveniment? Aquesta acció no es pot desfer.";
+
+/* Alerts */
+"couldnt_save_event" = "No s'ha pogut desar l'esdeveniment";
+"try_again" = "Torneu-ho a provar o trieu un calendari diferent.";
+"email_not_available" = "Correu electrònic no disponible";
+"setup_mail" = "Configureu l'app Mail o contacteu-nos a feedback@practical.app";
+"read_only_calendar" = "Calendari de només lectura";
+
+/* Error Messages */
+"failed_to_delete" = "Error en eliminar l'esdeveniment. Torneu-ho a provar.";
+"failed_to_save" = "Error en desar al calendari seleccionat. Pot ser de només lectura o temporalment no disponible.";
+"read_only_calendar_message" = "Aquest calendari no es pot modificar a través dels Calendaris d'iOS.\n\nPossibles raons:\n- Calendari subscrit (ICS)\n- Festius/Aniversaris o altre calendari del sistema\n- Calendari compartit sense drets de 'Fer canvis'\n\nAfegiu el vostre compte de Google a Configuració > Calendari > Comptes i seleccioneu un calendari de Gmail editable.";
