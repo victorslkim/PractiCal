@@ -1,0 +1,89 @@
+/* General */
+"settings" = "设置";
+"done" = "完成";
+"cancel" = "取消";
+"save" = "保存";
+"delete" = "删除";
+"edit" = "编辑";
+"add" = "添加";
+"search" = "搜索";
+"ok" = "确定";
+"clear" = "清除";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "今天";
+"all_day" = "全天";
+"no_events" = "无事件";
+
+/* Settings */
+"general" = "通用";
+"appearance" = "外观";
+"edit_event" = "编辑事件";
+"notification" = "通知";
+"support" = "支持";
+"send_feedback" = "发送反馈";
+"help" = "帮助";
+"support_practical" = "支持 PractiCal";
+"share_app" = "分享应用";
+"write_review" = "撰写 App Store 评价";
+"donation" = "捐赠";
+
+/* Appearance Settings */
+"preview" = "预览";
+"calendar_settings" = "日历设置";
+"first_day_of_week" = "一周的第一天";
+"theme" = "主题";
+"accent_color" = "强调色";
+"highlight" = "高亮";
+"language" = "语言";
+"holidays" = "节假日";
+"saturdays" = "周六";
+"sundays" = "周日";
+"sat" = "六";
+"sun" = "日";
+
+/* Language */
+"system_default" = "系统默认";
+"search_languages" = "搜索语言";
+
+/* Week Days */
+"sunday" = "星期日";
+"monday" = "星期一";
+"tuesday" = "星期二";
+"wednesday" = "星期三";
+"thursday" = "星期四";
+"friday" = "星期五";
+"saturday" = "星期六";
+
+/* Themes */
+"system" = "系统";
+"light" = "浅色";
+"dark" = "深色";
+
+/* Event Editor */
+"new_event" = "新事件";
+"event_title" = "事件标题";
+"location" = "位置";
+"url" = "URL";
+"notes" = "备注";
+"start_date" = "开始";
+"end_date" = "结束";
+"calendar" = "日历";
+"alert" = "提醒";
+"repeat" = "重复";
+"remove_event" = "删除事件";
+"remove_event_confirmation" = "删除事件";
+"remove_event_message" = "您确定要删除此事件吗？此操作无法撤销。";
+
+/* Alerts */
+"couldnt_save_event" = "无法保存事件";
+"try_again" = "请重试或选择其他日历。";
+"email_not_available" = "邮件不可用";
+"setup_mail" = "请设置邮件应用或联系我们：feedback@practical.app";
+"read_only_calendar" = "只读日历";
+
+/* Error Messages */
+"failed_to_delete" = "删除事件失败。请重试。";
+"failed_to_save" = "保存到所选日历失败。该日历可能为只读或暂时不可用。";
+"read_only_calendar_message" = "此日历无法通过 iOS 日历修改。\n\n可能的原因：\n- 订阅的 (ICS) 日历\n- 节假日/生日或其他系统日历\n- 没有"进行更改"权限的共享日历\n\n请在设置 > 日历 > 账户中添加您的 Google 账户，并选择可编辑的 Gmail 日历。";

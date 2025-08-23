@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Pengaturan";
+"done" = "Selesai";
+"cancel" = "Batal";
+"save" = "Simpan";
+"delete" = "Hapus";
+"edit" = "Edit";
+"add" = "Tambah";
+"search" = "Cari";
+"ok" = "OK";
+"clear" = "Hapus";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Hari ini";
+"all_day" = "Sepanjang hari";
+"no_events" = "Tidak ada acara";
+
+/* Settings */
+"general" = "Umum";
+"appearance" = "Tampilan";
+"edit_event" = "Edit acara";
+"notification" = "Notifikasi";
+"support" = "Dukungan";
+"send_feedback" = "Kirim masukan";
+"help" = "Bantuan";
+"support_practical" = "Dukung PractiCal";
+"share_app" = "Bagikan aplikasi";
+"write_review" = "Tulis ulasan App Store";
+"donation" = "Donasi";
+
+/* Appearance Settings */
+"preview" = "Pratinjau";
+"calendar_settings" = "Pengaturan kalender";
+"first_day_of_week" = "Hari pertama dalam seminggu";
+"theme" = "Tema";
+"accent_color" = "Warna aksen";
+"highlight" = "Sorot";
+"language" = "Bahasa";
+"holidays" = "Hari libur";
+"saturdays" = "Sabtu";
+"sundays" = "Minggu";
+"sat" = "Sab";
+"sun" = "Min";
+
+/* Language */
+"system_default" = "Bawaan sistem";
+"search_languages" = "Cari bahasa";
+
+/* Week Days */
+"sunday" = "Minggu";
+"monday" = "Senin";
+"tuesday" = "Selasa";
+"wednesday" = "Rabu";
+"thursday" = "Kamis";
+"friday" = "Jumat";
+"saturday" = "Sabtu";
+
+/* Themes */
+"system" = "Sistem";
+"light" = "Terang";
+"dark" = "Gelap";
+
+/* Event Editor */
+"new_event" = "Acara baru";
+"event_title" = "Judul acara";
+"location" = "Lokasi";
+"url" = "URL";
+"notes" = "Catatan";
+"start_date" = "Mulai";
+"end_date" = "Selesai";
+"calendar" = "Kalender";
+"alert" = "Peringatan";
+"repeat" = "Ulangi";
+"remove_event" = "Hapus acara";
+"remove_event_confirmation" = "Hapus acara";
+"remove_event_message" = "Apakah Anda yakin ingin menghapus acara ini? Tindakan ini tidak dapat dibatalkan.";
+
+/* Alerts */
+"couldnt_save_event" = "Tidak dapat menyimpan acara";
+"try_again" = "Coba lagi atau pilih kalender yang berbeda.";
+"email_not_available" = "Email tidak tersedia";
+"setup_mail" = "Atur aplikasi Mail atau hubungi kami di feedback@practical.app";
+"read_only_calendar" = "Kalender hanya baca";
+
+/* Error Messages */
+"failed_to_delete" = "Gagal menghapus acara. Coba lagi.";
+"failed_to_save" = "Gagal menyimpan ke kalender yang dipilih. Mungkin hanya baca atau sementara tidak tersedia.";
+"read_only_calendar_message" = "Kalender ini tidak dapat dimodifikasi melalui Kalender iOS.\n\nKemungkinan penyebab:\n- Kalender berlangganan (ICS)\n- Hari libur/Ulang tahun atau kalender sistem lainnya\n- Kalender bersama tanpa hak 'Buat perubahan'\n\nTambahkan akun Google Anda di Pengaturan > Kalender > Akun dan pilih kalender Gmail yang dapat diedit.";

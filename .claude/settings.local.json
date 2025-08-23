@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(swift --version)",
+      "Bash(plutil -lint:*)",
+      "Bash(xcrun simctl install:*)",
+      "Bash(xcrun simctl launch:*)",
+      "Bash(cp:*)",
+      "Bash(xcrun simctl boot:*)",
+      "Bash(open:*)",
+      "Bash(chmod:*)",
+      "Bash(./build.sh)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(swiftc:*)",
+      "Bash(claude --usage)",
+      "Bash(claude usage)",
+      "Bash(claude config list)",
+      "Bash(xcrun xctrace:*)",
+      "Bash(security find-identity:*)",
+      "Bash(security find-certificate:*)",
+      "Bash(security cms:*)",
+      "Bash(./build-hybrid.sh:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(xcrun devicectl list:*)",
+      "Bash(xcode-select:*)",
+      "Bash(xcrun:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(git checkout:*)",
+      "Bash(find:*)",
+      "Bash(git reset:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

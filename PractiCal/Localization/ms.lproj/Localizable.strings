@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Settings";
+"done" = "Done";
+"cancel" = "Cancel";
+"save" = "Save";
+"delete" = "Delete";
+"edit" = "Edit";
+"add" = "Add";
+"search" = "Search";
+"ok" = "OK";
+"clear" = "Clear";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Today";
+"all_day" = "All day";
+"no_events" = "No events";
+
+/* Settings */
+"general" = "General";
+"appearance" = "Appearance";
+"edit_event" = "Edit Event";
+"notification" = "Notification";
+"support" = "Support";
+"send_feedback" = "Send Feedback";
+"help" = "Help";
+"support_practical" = "Support PractiCal";
+"share_app" = "Share App";
+"write_review" = "Write an App Store Review";
+"donation" = "Donation";
+
+/* Appearance Settings */
+"preview" = "Preview";
+"calendar_settings" = "Calendar Settings";
+"first_day_of_week" = "First Day of Week";
+"theme" = "Theme";
+"accent_color" = "Accent Color";
+"highlight" = "Highlight";
+"language" = "Language";
+"holidays" = "Holidays";
+"saturdays" = "Saturdays";
+"sundays" = "Sundays";
+"sat" = "Sat";
+"sun" = "Sun";
+
+/* Language */
+"system_default" = "System Default";
+"search_languages" = "Search languages";
+
+/* Week Days */
+"sunday" = "Sunday";
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
+
+/* Themes */
+"system" = "System";
+"light" = "Light";
+"dark" = "Dark";
+
+/* Event Editor */
+"new_event" = "New Event";
+"event_title" = "Event Title";
+"location" = "Location";
+"url" = "URL";
+"notes" = "Notes";
+"start_date" = "Start";
+"end_date" = "End";
+"calendar" = "Calendar";
+"alert" = "Alert";
+"repeat" = "Repeat";
+"remove_event" = "Remove Event";
+"remove_event_confirmation" = "Remove Event";
+"remove_event_message" = "Are you sure you want to remove this event? This action cannot be undone.";
+
+/* Alerts */
+"couldnt_save_event" = "Couldn't Save Event";
+"try_again" = "Please try again or choose a different calendar.";
+"email_not_available" = "Email Not Available";
+"setup_mail" = "Please set up Mail app or contact us at feedback@practical.app";
+"read_only_calendar" = "Read-only Calendar";
+
+/* Error Messages */
+"failed_to_delete" = "Failed to delete the event. Please try again.";
+"failed_to_save" = "Failed to save to the selected calendar. It may be read-only or temporarily unavailable.";
+"read_only_calendar_message" = "This calendar cannot be modified via iOS Calendars.\n\nPossible reasons:\n- Subscribed (ICS) calendar\n- Holidays/Birthdays or other system calendar\n- Shared calendar without 'Make changes' rights\n\nAdd your Google account under Settings > Calendar > Accounts and select a writable Gmail calendar instead.";

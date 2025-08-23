@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Innstillinger";
+"done" = "Ferdig";
+"cancel" = "Avbryt";
+"save" = "Lagre";
+"delete" = "Slett";
+"edit" = "Rediger";
+"add" = "Legg til";
+"search" = "Søk";
+"ok" = "OK";
+"clear" = "Tøm";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "I dag";
+"all_day" = "Hele dagen";
+"no_events" = "Ingen hendelser";
+
+/* Settings */
+"general" = "Generelt";
+"appearance" = "Utseende";
+"edit_event" = "Rediger hendelse";
+"notification" = "Varsling";
+"support" = "Støtte";
+"send_feedback" = "Send tilbakemelding";
+"help" = "Hjelp";
+"support_practical" = "Støtt PractiCal";
+"share_app" = "Del app";
+"write_review" = "Skriv App Store-anmeldelse";
+"donation" = "Donasjon";
+
+/* Appearance Settings */
+"preview" = "Forhåndsvisning";
+"calendar_settings" = "Kalenderinnstillinger";
+"first_day_of_week" = "Første dag i uken";
+"theme" = "Tema";
+"accent_color" = "Aksentfarge";
+"highlight" = "Fremhev";
+"language" = "Språk";
+"holidays" = "Helligdager";
+"saturdays" = "Lørdager";
+"sundays" = "Søndager";
+"sat" = "Lør";
+"sun" = "Søn";
+
+/* Language */
+"system_default" = "Systemstandard";
+"search_languages" = "Søk språk";
+
+/* Week Days */
+"sunday" = "Søndag";
+"monday" = "Mandag";
+"tuesday" = "Tirsdag";
+"wednesday" = "Onsdag";
+"thursday" = "Torsdag";
+"friday" = "Fredag";
+"saturday" = "Lørdag";
+
+/* Themes */
+"system" = "System";
+"light" = "Lys";
+"dark" = "Mørk";
+
+/* Event Editor */
+"new_event" = "Ny hendelse";
+"event_title" = "Hendelsestittel";
+"location" = "Sted";
+"url" = "URL";
+"notes" = "Notater";
+"start_date" = "Start";
+"end_date" = "Slutt";
+"calendar" = "Kalender";
+"alert" = "Varsel";
+"repeat" = "Gjenta";
+"remove_event" = "Fjern hendelse";
+"remove_event_confirmation" = "Fjern hendelse";
+"remove_event_message" = "Er du sikker på at du vil fjerne denne hendelsen? Denne handlingen kan ikke angres.";
+
+/* Alerts */
+"couldnt_save_event" = "Kunne ikke lagre hendelse";
+"try_again" = "Prøv igjen eller velg en annen kalender.";
+"email_not_available" = "E-post ikke tilgjengelig";
+"setup_mail" = "Sett opp Mail-appen eller kontakt oss på feedback@practical.app";
+"read_only_calendar" = "Skrivebeskyttet kalender";
+
+/* Error Messages */
+"failed_to_delete" = "Kunne ikke slette hendelsen. Prøv igjen.";
+"failed_to_save" = "Kunne ikke lagre til valgt kalender. Den kan være skrivebeskyttet eller midlertidig utilgjengelig.";
+"read_only_calendar_message" = "Denne kalenderen kan ikke endres via iOS Kalendere.\n\nMulige årsaker:\n- Abonnert (ICS) kalender\n- Helligdager/Bursdager eller annen systemkalender\n- Delt kalender uten 'Gjør endringer' rettigheter\n\nLegg til Google-kontoen din under Innstillinger > Kalender > Kontoer og velg en redigerbar Gmail-kalender i stedet.";

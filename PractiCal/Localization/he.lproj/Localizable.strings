@@ -1,0 +1,89 @@
+/* General */
+"settings" = "הגדרות";
+"done" = "סיום";
+"cancel" = "ביטול";
+"save" = "שמירה";
+"delete" = "מחיקה";
+"edit" = "עריכה";
+"add" = "הוספה";
+"search" = "חיפוש";
+"ok" = "אישור";
+"clear" = "ניקוי";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "היום";
+"all_day" = "כל היום";
+"no_events" = "אין אירועים";
+
+/* Settings */
+"general" = "כללי";
+"appearance" = "מראה";
+"edit_event" = "עריכת אירוע";
+"notification" = "התראה";
+"support" = "תמיכה";
+"send_feedback" = "שליחת משוב";
+"help" = "עזרה";
+"support_practical" = "תמיכה ב-PractiCal";
+"share_app" = "שיתוף האפליקציה";
+"write_review" = "כתיבת ביקורת ב-App Store";
+"donation" = "תרומה";
+
+/* Appearance Settings */
+"preview" = "תצוגה מקדימה";
+"calendar_settings" = "הגדרות לוח שנה";
+"first_day_of_week" = "היום הראשון בשבוע";
+"theme" = "ערכת נושא";
+"accent_color" = "צבע הדגשה";
+"highlight" = "הדגשה";
+"language" = "שפה";
+"holidays" = "חגים";
+"saturdays" = "שבתות";
+"sundays" = "ימי ראשון";
+"sat" = "ש׳";
+"sun" = "א׳";
+
+/* Language */
+"system_default" = "ברירת מחדל של המערכת";
+"search_languages" = "חיפוש שפות";
+
+/* Week Days */
+"sunday" = "יום ראשון";
+"monday" = "יום שני";
+"tuesday" = "יום שלישי";
+"wednesday" = "יום רביעי";
+"thursday" = "יום חמישי";
+"friday" = "יום שישי";
+"saturday" = "יום שבת";
+
+/* Themes */
+"system" = "מערכת";
+"light" = "בהיר";
+"dark" = "כהה";
+
+/* Event Editor */
+"new_event" = "אירוע חדש";
+"event_title" = "כותרת האירוע";
+"location" = "מיקום";
+"url" = "כתובת אתר";
+"notes" = "הערות";
+"start_date" = "התחלה";
+"end_date" = "סיום";
+"calendar" = "לוח שנה";
+"alert" = "התראה";
+"repeat" = "חזרה";
+"remove_event" = "הסרת אירוע";
+"remove_event_confirmation" = "הסרת אירוע";
+"remove_event_message" = "האם אתה בטוח שברצונך להסיר אירוע זה? פעולה זו לא ניתנת לביטול.";
+
+/* Alerts */
+"couldnt_save_event" = "לא ניתן לשמור את האירוע";
+"try_again" = "נסה שוב או בחר לוח שנה אחר.";
+"email_not_available" = "דואר אלקטרוני לא זמין";
+"setup_mail" = "הגדר את אפליקציית Mail או צור קשר עמנו בכתובת feedback@practical.app";
+"read_only_calendar" = "לוח שנה לקריאה בלבד";
+
+/* Error Messages */
+"failed_to_delete" = "נכשל במחיקת האירוע. נסה שוב.";
+"failed_to_save" = "נכשל בשמירה ללוח השנה הנבחר. ייתכן שהוא לקריאה בלבד או לא זמין זמנית.";
+"read_only_calendar_message" = "לוח שנה זה לא ניתן לשינוי דרך לוחות השנה של iOS.\n\nסיבות אפשריות:\n- לוח שנה מנוי (ICS)\n- חגים/ימי הולדת או לוח שנה אחר של המערכת\n- לוח שנה משותף ללא זכויות 'ביצוע שינויים'\n\nהוסף את חשבון Google שלך תחת הגדרות > לוח שנה > חשבונות ובחר לוח שנה של Gmail הניתן לעריכה.";

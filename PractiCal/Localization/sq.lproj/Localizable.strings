@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Cilësimet";
+"done" = "U krye";
+"cancel" = "Anulo";
+"save" = "Ruaj";
+"delete" = "Fshi";
+"edit" = "Modifiko";
+"add" = "Shto";
+"search" = "Kërko";
+"ok" = "OK";
+"clear" = "Pastro";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Sot";
+"all_day" = "Gjithë ditën";
+"no_events" = "Nuk ka ngjarje";
+
+/* Settings */
+"general" = "Të përgjithshme";
+"appearance" = "Pamja";
+"edit_event" = "Modifiko ngjarjen";
+"notification" = "Njoftimi";
+"support" = "Mbështetje";
+"send_feedback" = "Dërgo përshtypje";
+"help" = "Ndihmë";
+"support_practical" = "Mbështet PractiCal";
+"share_app" = "Ndaj aplikacionin";
+"write_review" = "Shkruaj vlerësim në App Store";
+"donation" = "Donacion";
+
+/* Appearance Settings */
+"preview" = "Paraparje";
+"calendar_settings" = "Cilësimet e kalendarit";
+"first_day_of_week" = "Dita e parë e javës";
+"theme" = "Tema";
+"accent_color" = "Ngjyra theksore";
+"highlight" = "Thekso";
+"language" = "Gjuha";
+"holidays" = "Pushimet";
+"saturdays" = "E shtunat";
+"sundays" = "E dielat";
+"sat" = "Sht";
+"sun" = "Die";
+
+/* Language */
+"system_default" = "Parazgjedhja e sistemit";
+"search_languages" = "Kërko gjuhë";
+
+/* Week Days */
+"sunday" = "E diel";
+"monday" = "E hënë";
+"tuesday" = "E martë";
+"wednesday" = "E mërkurë";
+"thursday" = "E enjte";
+"friday" = "E premte";
+"saturday" = "E shtunë";
+
+/* Themes */
+"system" = "Sistem";
+"light" = "E çelët";
+"dark" = "E errët";
+
+/* Event Editor */
+"new_event" = "Ngjarje e re";
+"event_title" = "Titulli i ngjarjes";
+"location" = "Vendndodhja";
+"url" = "URL";
+"notes" = "Shënime";
+"start_date" = "Fillimi";
+"end_date" = "Fundi";
+"calendar" = "Kalendari";
+"alert" = "Alarmi";
+"repeat" = "Përsërit";
+"remove_event" = "Hiq ngjarjen";
+"remove_event_confirmation" = "Hiq ngjarjen";
+"remove_event_message" = "Je i sigurt që dëshiron ta heqësh këtë ngjarje? Ky veprim nuk mund të zhbëhet.";
+
+/* Alerts */
+"couldnt_save_event" = "Nuk mund të ruhet ngjarjet";
+"try_again" = "Provo përsëri ose zgjidh një kalendar tjetër.";
+"email_not_available" = "Email-i nuk është i disponueshëm";
+"setup_mail" = "Konfiguro aplikacionin Mail ose na kontakto në feedback@practical.app";
+"read_only_calendar" = "Kalendar vetëm për lexim";
+
+/* Error Messages */
+"failed_to_delete" = "Dështoi në fshirjen e ngjarjes. Provo përsëri.";
+"failed_to_save" = "Dështoi në ruajtjen në kalendarin e zgjedhur. Mund të jetë vetëm për lexim ose përkohësisht i padisponueshëm.";
+"read_only_calendar_message" = "Ky kalendar nuk mund të modifikohet përmes Kalendarëve iOS.\n\nArsyet e mundshme:\n- Kalendar i abonuar (ICS)\n- Pushimet/Ditëlindjet ose kalendar tjetër sistemi\n- Kalendar i ndarë pa të drejtat 'Bëj ndryshime'\n\nShto llogarinë tënde Google nën Cilësimet > Kalendari > Llogaritë dhe zgjidh një kalendar Gmail të modifikueshëm.";

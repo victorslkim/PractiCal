@@ -1,0 +1,89 @@
+/* General */
+"settings" = "الإعدادات";
+"done" = "تم";
+"cancel" = "إلغاء";
+"save" = "حفظ";
+"delete" = "حذف";
+"edit" = "تحرير";
+"add" = "إضافة";
+"search" = "البحث";
+"ok" = "موافق";
+"clear" = "مسح";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "اليوم";
+"all_day" = "طوال اليوم";
+"no_events" = "لا توجد أحداث";
+
+/* Settings */
+"general" = "عام";
+"appearance" = "المظهر";
+"edit_event" = "تحرير الحدث";
+"notification" = "الإشعار";
+"support" = "الدعم";
+"send_feedback" = "إرسال ملاحظات";
+"help" = "المساعدة";
+"support_practical" = "دعم PractiCal";
+"share_app" = "مشاركة التطبيق";
+"write_review" = "كتابة مراجعة App Store";
+"donation" = "التبرع";
+
+/* Appearance Settings */
+"preview" = "معاينة";
+"calendar_settings" = "إعدادات التقويم";
+"first_day_of_week" = "أول يوم في الأسبوع";
+"theme" = "السمة";
+"accent_color" = "لون التمييز";
+"highlight" = "إبراز";
+"language" = "اللغة";
+"holidays" = "العطل";
+"saturdays" = "السبت";
+"sundays" = "الأحد";
+"sat" = "سبت";
+"sun" = "أحد";
+
+/* Language */
+"system_default" = "افتراضي النظام";
+"search_languages" = "البحث عن اللغات";
+
+/* Week Days */
+"sunday" = "الأحد";
+"monday" = "الاثنين";
+"tuesday" = "الثلاثاء";
+"wednesday" = "الأربعاء";
+"thursday" = "الخميس";
+"friday" = "الجمعة";
+"saturday" = "السبت";
+
+/* Themes */
+"system" = "النظام";
+"light" = "فاتح";
+"dark" = "داكن";
+
+/* Event Editor */
+"new_event" = "حدث جديد";
+"event_title" = "عنوان الحدث";
+"location" = "الموقع";
+"url" = "الرابط";
+"notes" = "الملاحظات";
+"start_date" = "البداية";
+"end_date" = "النهاية";
+"calendar" = "التقويم";
+"alert" = "التنبيه";
+"repeat" = "التكرار";
+"remove_event" = "إزالة الحدث";
+"remove_event_confirmation" = "إزالة الحدث";
+"remove_event_message" = "هل أنت متأكد من أنك تريد إزالة هذا الحدث؟ لا يمكن التراجع عن هذا الإجراء.";
+
+/* Alerts */
+"couldnt_save_event" = "تعذر حفظ الحدث";
+"try_again" = "يرجى المحاولة مرة أخرى أو اختيار تقويم مختلف.";
+"email_not_available" = "البريد الإلكتروني غير متاح";
+"setup_mail" = "يرجى إعداد تطبيق البريد أو التواصل معنا على feedback@practical.app";
+"read_only_calendar" = "تقويم للقراءة فقط";
+
+/* Error Messages */
+"failed_to_delete" = "فشل في حذف الحدث. يرجى المحاولة مرة أخرى.";
+"failed_to_save" = "فشل في الحفظ في التقويم المحدد. قد يكون للقراءة فقط أو غير متاح مؤقتاً.";
+"read_only_calendar_message" = "لا يمكن تعديل هذا التقويم عبر تقويمات iOS.\n\nالأسباب المحتملة:\n- تقويم مشترك (ICS)\n- العطل/أعياد الميلاد أو تقويم النظام الآخر\n- تقويم مشترك بدون حقوق 'إجراء تغييرات'\n\nأضف حساب Google الخاص بك تحت الإعدادات > التقويم > الحسابات واختر تقويم Gmail قابل للتحرير بدلاً من ذلك.";

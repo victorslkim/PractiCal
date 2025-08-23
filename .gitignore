@@ -1,0 +1,34 @@
+# Build artifacts
+PractiCal.app/
+PractiCal-Simulator.app/
+PractiCal.app.entitlements
+
+# Compiled binaries and intermediate files
+PractiCal-Device
+PractiCal-Simulator
+PractiCal/PractiCal
+PractiCal/PractiCal-Simulator
+PractiCal/PractiCal-iOS
+test-lang
+*.o
+*.dSYM
+
+# Build configuration (contains sensitive Apple Developer info)
+build.config
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+build/
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log

@@ -1,0 +1,102 @@
+/* General */
+"settings" = "設定";
+"done" = "完了";
+"cancel" = "キャンセル";
+"save" = "保存";
+"delete" = "削除";
+"edit" = "編集";
+"add" = "追加";
+"search" = "検索";
+"ok" = "OK";
+"clear" = "クリア";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "今日";
+"all_day" = "終日";
+"no_events" = "イベントなし";
+
+/* Settings */
+"general" = "一般";
+"appearance" = "外観";
+"edit_event" = "イベントを編集";
+"notification" = "通知";
+"support" = "サポート";
+"send_feedback" = "フィードバックを送信";
+"help" = "ヘルプ";
+"support_practical" = "PractiCalをサポート";
+"share_app" = "アプリを共有";
+"write_review" = "App Storeレビューを書く";
+"donation" = "寄付";
+
+/* Appearance Settings */
+"preview" = "プレビュー";
+"calendar_settings" = "カレンダー設定";
+"first_day_of_week" = "週の最初の日";
+"theme" = "テーマ";
+"accent_color" = "アクセントカラー";
+"highlight" = "ハイライト";
+"language" = "言語";
+"holidays" = "祝日";
+"saturdays" = "土曜日";
+"sundays" = "日曜日";
+"sat" = "土";
+"sun" = "日";
+
+/* Language */
+"system_default" = "システムデフォルト";
+"search_languages" = "言語を検索";
+"change_language" = "言語を変更";
+"change_language_message" = "言語を{language}に変更しますか？新しい言語を適用するためにアプリが再起動されます。";
+"change" = "変更";
+"cancel" = "キャンセル";
+
+/* Week Days */
+"sunday" = "日曜日";
+"monday" = "月曜日";
+"tuesday" = "火曜日";
+"wednesday" = "水曜日";
+"thursday" = "木曜日";
+"friday" = "金曜日";
+"saturday" = "土曜日";
+
+/* Themes */
+"system" = "システム";
+"light" = "ライト";
+"dark" = "ダーク";
+
+/* Day Cell Appearance */
+"day_cell_appearance" = "日付セル外観";
+"event_text_size" = "イベントテキストサイズ";
+"size" = "サイズ";
+"bold_text" = "太字テキスト";
+"show_event_background" = "イベント背景を表示";
+"reset_to_defaults" = "デフォルトにリセット";
+"day_cell_preview" = "日付セルプレビュー";
+
+/* Event Editor */
+"new_event" = "新しいイベント";
+"event_title" = "イベントタイトル";
+"location" = "場所";
+"url" = "URL";
+"notes" = "メモ";
+"start_date" = "開始";
+"end_date" = "終了";
+"calendar" = "カレンダー";
+"alert" = "アラート";
+"repeat" = "繰り返し";
+"remove_event" = "イベントを削除";
+"remove_event_confirmation" = "イベントを削除";
+"remove_event_message" = "このイベントを削除してもよろしいですか？この操作は元に戻せません。";
+
+/* Alerts */
+"couldnt_save_event" = "イベントを保存できませんでした";
+"try_again" = "もう一度試すか、別のカレンダーを選択してください。";
+"email_not_available" = "メールが利用できません";
+"setup_mail" = "メールアプリを設定するか、feedback@practical.appまでお問い合わせください";
+"read_only_calendar" = "読み取り専用カレンダー";
+
+/* Error Messages */
+"failed_to_delete" = "イベントの削除に失敗しました。もう一度お試しください。";
+"failed_to_save" = "選択したカレンダーへの保存に失敗しました。読み取り専用か一時的に利用できない可能性があります。";
+"read_only_calendar_message" = "このカレンダーはiOSカレンダー経由で変更できません。\n\n考えられる理由：\n- 購読（ICS）カレンダー\n- 祝日/誕生日またはその他のシステムカレンダー\n- '変更を加える'権限のない共有カレンダー\n\n設定 > カレンダー > アカウントでGoogleアカウントを追加し、代わりに編集可能なGmailカレンダーを選択してください。";

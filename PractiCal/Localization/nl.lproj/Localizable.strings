@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Instellingen";
+"done" = "Klaar";
+"cancel" = "Annuleren";
+"save" = "Opslaan";
+"delete" = "Verwijderen";
+"edit" = "Bewerken";
+"add" = "Toevoegen";
+"search" = "Zoeken";
+"ok" = "OK";
+"clear" = "Wissen";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Vandaag";
+"all_day" = "Hele dag";
+"no_events" = "Geen gebeurtenissen";
+
+/* Settings */
+"general" = "Algemeen";
+"appearance" = "Weergave";
+"edit_event" = "Gebeurtenis bewerken";
+"notification" = "Melding";
+"support" = "Ondersteuning";
+"send_feedback" = "Feedback verzenden";
+"help" = "Help";
+"support_practical" = "PractiCal ondersteunen";
+"share_app" = "App delen";
+"write_review" = "App Store beoordeling schrijven";
+"donation" = "Donatie";
+
+/* Appearance Settings */
+"preview" = "Voorbeeld";
+"calendar_settings" = "Kalender instellingen";
+"first_day_of_week" = "Eerste dag van de week";
+"theme" = "Thema";
+"accent_color" = "Accentkleur";
+"highlight" = "Markeren";
+"language" = "Taal";
+"holidays" = "Feestdagen";
+"saturdays" = "Zaterdagen";
+"sundays" = "Zondagen";
+"sat" = "Za";
+"sun" = "Zo";
+
+/* Language */
+"system_default" = "Systeemstandaard";
+"search_languages" = "Talen zoeken";
+
+/* Week Days */
+"sunday" = "Zondag";
+"monday" = "Maandag";
+"tuesday" = "Dinsdag";
+"wednesday" = "Woensdag";
+"thursday" = "Donderdag";
+"friday" = "Vrijdag";
+"saturday" = "Zaterdag";
+
+/* Themes */
+"system" = "Systeem";
+"light" = "Licht";
+"dark" = "Donker";
+
+/* Event Editor */
+"new_event" = "Nieuwe gebeurtenis";
+"event_title" = "Gebeurtenis titel";
+"location" = "Locatie";
+"url" = "URL";
+"notes" = "Notities";
+"start_date" = "Start";
+"end_date" = "Einde";
+"calendar" = "Kalender";
+"alert" = "Waarschuwing";
+"repeat" = "Herhalen";
+"remove_event" = "Gebeurtenis verwijderen";
+"remove_event_confirmation" = "Gebeurtenis verwijderen";
+"remove_event_message" = "Weet je zeker dat je deze gebeurtenis wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.";
+
+/* Alerts */
+"couldnt_save_event" = "Kon gebeurtenis niet opslaan";
+"try_again" = "Probeer het opnieuw of kies een andere kalender.";
+"email_not_available" = "E-mail niet beschikbaar";
+"setup_mail" = "Stel de Mail app in of neem contact met ons op via feedback@practical.app";
+"read_only_calendar" = "Alleen-lezen kalender";
+
+/* Error Messages */
+"failed_to_delete" = "Verwijderen van gebeurtenis mislukt. Probeer het opnieuw.";
+"failed_to_save" = "Opslaan in geselecteerde kalender mislukt. Deze is mogelijk alleen-lezen of tijdelijk niet beschikbaar.";
+"read_only_calendar_message" = "Deze kalender kan niet worden gewijzigd via iOS Kalenders.\n\nMogelijke redenen:\n- Geabonneerde (ICS) kalender\n- Feestdagen/Verjaardagen of andere systeemkalender\n- Gedeelde kalender zonder 'Wijzigingen aanbrengen' rechten\n\nVoeg je Google account toe onder Instellingen > Kalender > Accounts en selecteer een bewerkbare Gmail kalender.";

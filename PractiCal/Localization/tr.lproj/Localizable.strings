@@ -1,0 +1,89 @@
+/* General */
+"settings" = "Ayarlar";
+"done" = "Tamam";
+"cancel" = "İptal";
+"save" = "Kaydet";
+"delete" = "Sil";
+"edit" = "Düzenle";
+"add" = "Ekle";
+"search" = "Ara";
+"ok" = "Tamam";
+"clear" = "Temizle";
+
+/* Main Screen */
+"practical" = "PractiCal";
+"today" = "Bugün";
+"all_day" = "Tüm gün";
+"no_events" = "Etkinlik yok";
+
+/* Settings */
+"general" = "Genel";
+"appearance" = "Görünüm";
+"edit_event" = "Etkinliği düzenle";
+"notification" = "Bildirim";
+"support" = "Destek";
+"send_feedback" = "Geri bildirim gönder";
+"help" = "Yardım";
+"support_practical" = "PractiCal'ı destekle";
+"share_app" = "Uygulamayı paylaş";
+"write_review" = "App Store yorumu yaz";
+"donation" = "Bağış";
+
+/* Appearance Settings */
+"preview" = "Önizleme";
+"calendar_settings" = "Takvim ayarları";
+"first_day_of_week" = "Haftanın ilk günü";
+"theme" = "Tema";
+"accent_color" = "Vurgu rengi";
+"highlight" = "Vurgula";
+"language" = "Dil";
+"holidays" = "Tatiller";
+"saturdays" = "Cumartesiler";
+"sundays" = "Pazarlar";
+"sat" = "Cmt";
+"sun" = "Paz";
+
+/* Language */
+"system_default" = "Sistem varsayılanı";
+"search_languages" = "Dil ara";
+
+/* Week Days */
+"sunday" = "Pazar";
+"monday" = "Pazartesi";
+"tuesday" = "Salı";
+"wednesday" = "Çarşamba";
+"thursday" = "Perşembe";
+"friday" = "Cuma";
+"saturday" = "Cumartesi";
+
+/* Themes */
+"system" = "Sistem";
+"light" = "Açık";
+"dark" = "Koyu";
+
+/* Event Editor */
+"new_event" = "Yeni etkinlik";
+"event_title" = "Etkinlik başlığı";
+"location" = "Konum";
+"url" = "URL";
+"notes" = "Notlar";
+"start_date" = "Başlangıç";
+"end_date" = "Bitiş";
+"calendar" = "Takvim";
+"alert" = "Alarm";
+"repeat" = "Tekrarla";
+"remove_event" = "Etkinliği kaldır";
+"remove_event_confirmation" = "Etkinliği kaldır";
+"remove_event_message" = "Bu etkinliği kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz.";
+
+/* Alerts */
+"couldnt_save_event" = "Etkinlik kaydedilemedi";
+"try_again" = "Lütfen tekrar deneyin veya farklı bir takvim seçin.";
+"email_not_available" = "E-posta mevcut değil";
+"setup_mail" = "Lütfen Mail uygulamasını kurun veya feedback@practical.app adresinden bize ulaşın";
+"read_only_calendar" = "Salt okunur takvim";
+
+/* Error Messages */
+"failed_to_delete" = "Etkinlik silinirken hata oluştu. Lütfen tekrar deneyin.";
+"failed_to_save" = "Seçilen takvime kaydedilirken hata oluştu. Salt okunur olabilir veya geçici olarak kullanılamıyor.";
+"read_only_calendar_message" = "Bu takvim iOS Takvimler aracılığıyla değiştirilemez.\n\nOlası nedenler:\n- Abone olunan (ICS) takvim\n- Tatiller/Doğum günleri veya diğer sistem takvimi\n- 'Değişiklik yapma' haklarına sahip olmayan paylaşılan takvim\n\nAyarlar > Takvim > Hesaplar altından Google hesabınızı ekleyin ve bunun yerine düzenlenebilir bir Gmail takvimi seçin.";
