@@ -2,6 +2,25 @@
 
 PractiCal is a practical calendar mobile application for schedule management, available on iOS and Android.
 
+## Quick Start for AI Assistants
+
+**What is this?** A dual-platform (iOS + Android) calendar app with Month/Week/Day views, event management, and calendar integration.
+
+**Tech Stack:**
+- **iOS:** Swift 5.9+, SwiftUI, @Observable, EventKit
+- **Android:** Kotlin, Jetpack Compose, Hilt, Calendar Provider
+
+**Key Architecture:**
+- **iOS:** Single CalendarViewModel with @Observable, SwiftUI views, @Environment DI
+- **Android:** Single CalendarViewModel (planned refactor to 1:1 screen-viewmodel), Jetpack Compose, Hilt DI
+
+**Important Notes:**
+- Build scripts in `iOS/build.sh` and `Android/build.sh` (NOT root directory)
+- Android has monolithic CalendarViewModel (refactor planned but not done)
+- 40+ languages implemented (planned for removal - see TODO)
+- Portrait only, dark theme by default
+- Read existing code before proposing changes
+
 ## Setup
 
 ### Build Requirements
@@ -17,9 +36,13 @@ PractiCal is a practical calendar mobile application for schedule management, av
 4. Run `./build.sh --device` or `./build.sh --simulator`
 
 ### Build Commands
-- iOS: `./build.sh --device` or `./build.sh --simulator`
-- Android: `cd Android && ./gradlew installDebug`
+- iOS: `cd iOS && ./build.sh --device` or `cd iOS && ./build.sh --simulator`
+- Android: `cd Android && ./gradlew installDebug` or `cd Android && ./build.sh`
 - Do not use Xcode or Android Studio for builds
+
+### Additional Documentation
+- **LOCALIZATION.md** - Localization automation guide with Python/Bash scripts
+- **Android/SETUP.md** - Complete Android setup, build, and deployment guide
 
 ## Tech Stack
 
@@ -140,9 +163,26 @@ Opens as a sheet when the calendar button is tapped.
 - `EventListView.swift` - scrollable list of events for selected day
 - `WeekRowView.swift` - single week row used in month grid
 - `MonthView/` - month grid with swipeable pages, multi-day event lanes, day cells
+  - `MonthView.swift` - main month view container
+  - `DateNumbersRow.swift` - day numbers header row
+  - `EventsAreaView.swift` - event display area container
+  - `SingleDayChipsView.swift` - single-day event chips
+  - `MultiDayLanesView.swift` - multi-day event lanes layout
+  - `LaneEvent.swift` - lane event data model
 - `WeekView/` - 7-column weekly view with time grid and event blocks
+  - `WeekView.swift` - main week view container
+  - `EventBlockView.swift` - timed event block component
+  - `AllDayEventsSection.swift` - all-day events section
 - `DayView/` - single day view with hourly time slots
-- `Shared/` - shared components (TimeGrid, WeekDateHeader, CalendarConstants)
+  - `DayView.swift` - main day view container
+  - `DayEventBlockView.swift` - day view event block component
+- `Shared/` - shared components
+  - `TimeGrid.swift` - hourly time grid background
+  - `WeekDateHeader.swift` - week day header component
+  - `CalendarConstants.swift` - calendar layout constants
+  - `EventOverlapDetection.swift` - event overlap calculation utilities
+  - `TimeLabel.swift` - time display label component
+  - `AllDayLabel.swift` - all-day event label component
 
 #### SearchScreen/
 - `SearchView.swift` - search sheet with query input and results
@@ -152,11 +192,17 @@ Opens as a sheet when the calendar button is tapped.
 - `EventEditorView.swift` - event creation/editing form
 - `EventFormSections.swift` - form field components
 - `AlertPickerSheet.swift` - notification alert picker
+- `EventInfoView.swift` - event information display view
 
 #### SettingsScreen/
 - `SettingsView.swift` - main settings sheet with section list
 - `NotificationSettingsView.swift` - notification preferences
 - `EditEventSettingsView.swift` - default event settings
+- `HelpView.swift` - help and support view
+- `CalendarPreview.swift` - calendar preview component for settings
+- `DayCellPreview.swift` - day cell preview component for settings
+- `EventRowCardCustomizationView.swift` - event card customization settings
+- `DefaultCalendarPickerSheet.swift` - default calendar selection sheet
 
 #### CalendarSelectionScreen/
 - `CalendarSelectionView.swift` - calendar source picker (Google, iCloud, Apple)
@@ -164,26 +210,46 @@ Opens as a sheet when the calendar button is tapped.
 
 #### Shared/
 - `Event.swift` - event data model
+- `Event+Samples.swift` - sample event data for testing/previews
 - `CalendarManager.swift` - EventKit wrapper for calendar operations
 - `ThemeManager.swift` - app theming
 - `AppSettings.swift` - user preferences
+- `AppSettingsManager.swift` - settings persistence and management
 - `WeekSettings.swift` - week start day configuration
 - `HolidaySystem.swift` - holiday detection
+- `LayoutConstants.swift` - UI layout constants and dimensions
+- `EventHelpers.swift` - event manipulation utilities
+
+#### Localization/
+- `LanguageManager.swift` - language selection and management
+- `LanguageManager+StringLocalized.swift` - localized string extensions
+- `LanguageManager+WeekdaySymbols.swift` - localized weekday symbols
+- `LocalizationKeys.swift` - centralized localization key definitions
+- `LocalizationHelper.swift` - localization utility functions
+- `LanguageSelectionView.swift` - language picker UI
+- 40+ `.lproj` folders - language-specific string resources (en, ja, ko, es, fr, de, zh, ar, hi, pt, it, nl, sv, da, no, fi, pl, tr, uk, vi, am, bg, ca, cs, cy, el, etc.)
 
 ### Android (`Android/app/src/main/kotlin/com/practical/calendar/`)
 
-#### Architecture Pattern: 1:1 Screen-ViewModel
+#### Current Architecture: Monolithic ViewModel
 
-Each screen has exactly one ViewModel. Screens must NOT use ViewModels from other screens.
+**Current State:**
+- Single `CalendarViewModel` manages all application state
+- All screens and bottom sheets inject the same CalendarViewModel instance
+- State includes: events, selected date, current month, view mode, calendar lists, search results, settings
 
-**Rules:**
+**Future Architecture (TODO):** 1:1 Screen-ViewModel Pattern
+
+Each screen should have exactly one dedicated ViewModel. Screens must NOT use ViewModels from other screens.
+
+**Planned Rules:**
 1. `MainScreen` → `MainViewModel` only
 2. `SearchBottomSheet` → `SearchViewModel` only
 3. `SettingsBottomSheet` → `SettingsViewModel` only
 4. `CalendarSelectionBottomSheet` → `CalendarSelectionViewModel` only
 5. `EventEditorBottomSheet` → `EventEditorViewModel` only
 
-**Shared State Pattern:**
+**Shared State Pattern (for future refactor):**
 If multiple screens need the same data (e.g., selectedCalendarIds):
 1. Extract to a `@Singleton` repository class (e.g., `CalendarPreferencesRepository`)
 2. Inject the repository into each ViewModel that needs it via Hilt
@@ -220,11 +286,16 @@ class MainViewModel @Inject constructor(
 - `AppearanceBottomSheet.kt` - theme settings modal
 
 #### ui/viewmodel/
-- `MainViewModel.kt` - main calendar state (events, selected date, current month, view mode)
-- `SearchViewModel.kt` - search events loading and filtering
-- `CalendarSelectionViewModel.kt` - available calendars loading
-- `EventEditorViewModel.kt` - event creation/editing form state
-- `SettingsViewModel.kt` - settings persistence and sub-sheet navigation
+- `CalendarViewModel.kt` - **monolithic ViewModel** managing all app state:
+  - Calendar events and event-by-date mapping
+  - Selected date, current month, view mode (Month/Week/Day)
+  - Available calendars and selected calendar IDs
+  - Search query and search results
+  - Settings and preferences
+  - Sheet visibility states (search, settings, calendar selection, event editor)
+  - Holiday detection integration
+
+**Note:** Individual ViewModels (SearchViewModel, SettingsViewModel, etc.) are planned but not yet implemented. See "Future Architecture" above.
 
 #### ui/theme/
 - `Color.kt` - color definitions
@@ -237,22 +308,178 @@ class MainViewModel @Inject constructor(
 
 #### data/repository/
 - `CalendarRepository.kt` - ContentResolver wrapper for calendar operations
-- `CalendarPreferencesRepository.kt` - @Singleton, shared calendar selection state (selectedCalendarIds)
+  - Loads events from Android Calendar Provider
+  - Provides calendar metadata (name, color, account)
+  - Handles calendar permissions
+
+**Note:** Dedicated repositories like `CalendarPreferencesRepository` are planned but not yet implemented. Preferences are currently managed in CalendarViewModel.
 
 #### di/
 - `AppModule.kt` - Hilt module providing dependencies
+
+## Architectural Patterns
+
+### State Management
+**iOS:**
+- Use `@Observable` macro for ViewModels (not `ObservableObject`)
+- `@Environment` for dependency injection
+- Single source of truth in CalendarViewModel
+- Unidirectional data flow
+
+**Android:**
+- `StateFlow` for observable state
+- `@HiltViewModel` with constructor injection
+- Repository pattern for data access
+- Compose state hoisting
+
+### Data Flow
+1. User interaction → View
+2. View calls ViewModel method
+3. ViewModel updates Repository/Manager
+4. Repository/Manager updates data
+5. State flows back to View
+6. View recomposes/re-renders
+
+### Dependency Injection
+**iOS:** `@Environment` for passing dependencies down the view hierarchy
+**Android:** Hilt/Dagger for constructor injection
 
 ## UI Conventions
 - iOS: SF Symbols for icons, `.sheet()` for modals
 - Android: Material Icons, BottomSheet composables
 - Dark theme by default, event colors from calendar source
+- Consistent spacing: 8px base unit (iOS: 8pt, Android: 8dp)
+- Rounded corners: 12px for cards and sheets
+- Portrait orientation only (landscape not supported)
+
+## Development Workflows
+
+### For AI Assistants
+
+**Before Making Changes:**
+1. Read relevant files first - never propose changes to code you haven't seen
+2. Understand the existing architecture and patterns
+3. Check both iOS and Android implementations for consistency
+4. Review the TODO section to understand planned refactoring
+
+**When Adding Features:**
+1. Implement for both iOS and Android unless platform-specific
+2. Follow existing patterns (SwiftUI @Observable for iOS, Jetpack Compose + StateFlow for Android)
+3. Maintain feature parity between platforms
+4. Update this CLAUDE.md if adding new modules or changing architecture
+
+**When Refactoring:**
+1. Check if it aligns with TODO items
+2. Maintain backward compatibility during transitions
+3. Update documentation to reflect new architecture
+4. Test on both platforms
+
+**Code Style:**
+- iOS: Follow Swift API Design Guidelines, use SwiftUI best practices
+- Android: Follow Kotlin coding conventions, use Material 3 design system
+- Both: Prefer composition over inheritance, keep functions small and focused
+
+**File Naming Conventions:**
+- iOS: PascalCase for files, matches the main type name (e.g., `MonthView.swift`)
+- Android: PascalCase for files, matches the main type name (e.g., `MonthView.kt`)
+- Screens: Suffix with `View` (iOS) or `Screen` (Android) for top-level screens
+- Components: Suffix with `View` for both platforms
+- ViewModels: Suffix with `ViewModel`
+- Repositories: Suffix with `Repository`
+
+**File Organization:**
+- Group by feature/screen, not by type
+- Keep related components in the same directory
+- Use subdirectories for complex features (e.g., `MonthView/` with multiple files)
+- Extensions: Use `+` suffix (e.g., `Event+Samples.swift`, `LanguageManager+StringLocalized.swift`)
+
+### Git Workflow
+- Work on feature branches prefixed with `claude/`
+- Commit messages: Clear, concise, imperative mood ("Add feature" not "Added feature")
+- Push to branch specified in the task context
+- Create PR when feature is complete
+
+### Common Pitfalls
+
+**iOS:**
+- Don't use `ObservableObject` - use `@Observable` macro instead
+- Don't forget to request calendar permissions in Info.plist
+- Don't use `.currentPage` in TabView/paging - causes recomposition storms
+- SF Symbols must be checked for iOS version availability
+
+**Android:**
+- Don't pass ViewModels between screens - use shared repositories
+- Don't use `currentPage` in HorizontalPager - use `settledPage`
+- Calendar permissions require both READ and WRITE in Android 13+
+- Material Icons need to be imported from androidx.compose.material.icons
+
+**Both Platforms:**
+- Date/time handling: Always consider timezones and daylight saving time
+- Multi-day events: Handle events spanning midnight carefully
+- Performance: Loading too many events at once causes lag
+- Localization: String keys must match between iOS and Android (currently over-engineered, see TODO)
 
 ## Performance Notes
 - MonthView paging: use `settledPage` not `currentPage` to avoid recomposition storms
 - Event loading: use smart caching per month, avoid loading wide date ranges
 - HorizontalPager: set `beyondBoundsPageCount = 1` to limit simultaneous renders
+- iOS: Use `@Observable` macro for reactive state, avoid excessive `@Published` properties
+- Android: Use `StateFlow` for UI state, avoid unnecessary recomposition
+
+## Testing & Quality
+
+### Current State
+- **Unit Tests:** Not yet implemented
+- **UI Tests:** Not yet implemented
+- **Manual Testing:** Primary testing method
+
+### Testing Strategy (Planned)
+**iOS:**
+- XCTest for unit tests
+- SwiftUI Previews for UI iteration
+- XCUITest for integration tests
+
+**Android:**
+- JUnit + Truth for unit tests
+- Compose Testing for UI tests
+- Espresso for integration tests
+
+### Quality Checklist
+Before committing changes:
+- [ ] Code builds without errors on both platforms
+- [ ] No new compiler warnings introduced
+- [ ] Manual testing on real devices (iOS and Android)
+- [ ] Calendar permissions properly requested
+- [ ] Event loading performance is acceptable
+- [ ] No crashes on rotation or app backgrounding
+- [ ] Consistent behavior between iOS and Android
 
 ## TODO
-- [x] Refactor Android to 1:1 screen-viewmodel pattern (e.g., SettingsViewModel for SettingsBottomSheet)
-- [ ] Drop localization requirement - remove localization code until production-ready
-- [ ] Extract CalendarRepository API to interface with clear documentation for each function (both Android and iOS)
+
+### High Priority
+- [ ] **Refactor Android to 1:1 screen-viewmodel pattern**
+  - Extract SearchViewModel from CalendarViewModel
+  - Extract SettingsViewModel from CalendarViewModel
+  - Extract CalendarSelectionViewModel from CalendarViewModel
+  - Extract EventEditorViewModel from CalendarViewModel
+  - Create CalendarPreferencesRepository for shared state
+  - Update all bottom sheets to use hiltViewModel() instead of shared CalendarViewModel
+
+- [ ] **Drop localization requirement** - Remove localization code until production-ready
+  - **Current state**: 40+ languages fully implemented with automation scripts
+  - Remove iOS/PractiCal/Localization/ folder (6 Swift files + 40+ .lproj folders)
+  - Remove localize.py and LOCALIZATION.md
+  - Remove language selection from settings
+  - Simplify to English-only until production release
+
+- [ ] **Extract CalendarRepository API to interface**
+  - Create ICalendarRepository interface with clear documentation
+  - Document each function's purpose, parameters, and return values
+  - Implement for both Android (CalendarRepository.kt) and iOS (CalendarManager.swift)
+  - Add comprehensive inline documentation
+
+### Medium Priority
+- [ ] Document all public APIs with inline comments
+- [ ] Add unit tests for ViewModels and Repositories
+- [ ] Performance optimization for event loading
+- [ ] Accessibility improvements (VoiceOver/TalkBack support)
