@@ -40,7 +40,7 @@ import com.practical.calendar.ui.components.SearchBottomSheet
 import com.practical.calendar.ui.components.SettingsBottomSheet
 import com.practical.calendar.ui.components.CalendarSelectionBottomSheet
 import com.practical.calendar.ui.components.EventEditorBottomSheet
-import com.practical.calendar.ui.viewmodel.CalendarViewModel
+import com.practical.calendar.ui.viewmodel.MainViewModel
 import com.practical.calendar.data.model.Event
 import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
@@ -49,27 +49,25 @@ import kotlinx.datetime.toLocalDateTime
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(
-    viewModel: CalendarViewModel = hiltViewModel()
+    viewModel: MainViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val events by viewModel.events.collectAsStateWithLifecycle()
     val eventsByDate by viewModel.eventsByDate.collectAsStateWithLifecycle()
-    val availableCalendars by viewModel.availableCalendars.collectAsStateWithLifecycle()
-    val searchEvents by viewModel.searchEvents.collectAsStateWithLifecycle()
-    
+
     var showSearch by remember { mutableStateOf(false) }
     var showSettings by remember { mutableStateOf(false) }
     var showCalendarSelection by remember { mutableStateOf(false) }
     var showEventEditor by remember { mutableStateOf(false) }
     var selectedEventForEditing by remember { mutableStateOf<Event?>(null) }
 
-    val today = remember { 
-        Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date 
+    val today = remember {
+        Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
         val scrollState = rememberScrollState()
-        
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -79,11 +77,7 @@ fun MainScreen(
             HeaderView(
                 monthName = viewModel.getMonthName(),
                 onTodayTapped = { viewModel.goToToday() },
-                onSearchTapped = {
-                    android.util.Log.d("MainScreen", "Search tapped - loading search events")
-                    viewModel.loadSearchEvents()
-                    showSearch = true
-                },
+                onSearchTapped = { showSearch = true },
                 onSettingsTapped = { showSettings = true },
                 onCalendarSelectionTapped = { showCalendarSelection = true },
                 onMonthTapped = { viewModel.toggleDebugMode() },
@@ -154,14 +148,20 @@ fun MainScreen(
                             selectedDate = viewModel.selectedDate,
                             events = events,
                             onDateSelected = { viewModel.selectDate(it) },
-                            onEventTapped = { /* Handle event tap */ }
+                            onEventTapped = { event ->
+                                selectedEventForEditing = event
+                                showEventEditor = true
+                            }
                         )
                     }
                     ViewMode.DAY -> {
                         DayView(
                             selectedDate = viewModel.selectedDate,
                             events = events,
-                            onEventTapped = { /* Handle event tap */ }
+                            onEventTapped = { event ->
+                                selectedEventForEditing = event
+                                showEventEditor = true
+                            }
                         )
                     }
                 }
@@ -192,13 +192,10 @@ fun MainScreen(
         }
     }
 
-    // Bottom sheets and dialogs
+    // Bottom sheets - each gets its own ViewModel via hiltViewModel()
     if (showSearch) {
-        android.util.Log.d("MainScreen", "Showing SearchBottomSheet with ${searchEvents.size} events")
         SearchBottomSheet(
-            events = searchEvents,
             onEventSelected = { event ->
-                // Navigate to the event's date and open event editor
                 viewModel.selectDate(event.startTime.date)
                 selectedEventForEditing = event
                 showEventEditor = true
@@ -216,9 +213,6 @@ fun MainScreen(
 
     if (showCalendarSelection) {
         CalendarSelectionBottomSheet(
-            calendars = availableCalendars,
-            selectedCalendarIds = viewModel.selectedCalendarIds,
-            onSelectionChanged = { viewModel.updateSelectedCalendars(it) },
             onDismiss = { showCalendarSelection = false }
         )
     }
@@ -236,7 +230,6 @@ fun MainScreen(
     // Error handling
     uiState.error?.let { error ->
         LaunchedEffect(error) {
-            // Show error snackbar or dialog
             viewModel.clearError()
         }
     }

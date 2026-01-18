@@ -33,57 +33,38 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.activity.compose.BackHandler
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.practical.calendar.data.model.Event
+import com.practical.calendar.ui.viewmodel.SearchViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchBottomSheet(
-    events: List<Event> = emptyList(),
     onEventSelected: (Event) -> Unit = {},
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    viewModel: SearchViewModel = hiltViewModel()
 ) {
-    var searchQuery by remember { mutableStateOf("") }
-    var submittedQuery by remember { mutableStateOf("") }
+    val isLoading by viewModel.isLoading.collectAsState()
 
-
-    val filteredEvents by remember {
-        derivedStateOf {
-            android.util.Log.d("SearchBottomSheet", "Filtering with query: '$submittedQuery', events count: ${events.size}")
-            if (submittedQuery.isBlank()) {
-                emptyList()
-            } else {
-                val filtered = events.filter { event ->
-                    event.name.contains(submittedQuery, ignoreCase = true) ||
-                    event.description.contains(submittedQuery, ignoreCase = true) ||
-                    event.location.contains(submittedQuery, ignoreCase = true)
-                }.distinctBy { event ->
-                    // Deduplicate recurring events by id + start time
-                    "${event.id}|${event.startTime}"
-                }.sortedByDescending { event ->
-                    // Sort by descending date
-                    event.startTime
-                }
-                android.util.Log.d("SearchBottomSheet", "Filtered to ${filtered.size} results")
-                filtered
-            }
-        }
+    // Load search events when sheet opens
+    LaunchedEffect(Unit) {
+        viewModel.loadSearchEvents()
     }
+
+    val filteredEvents = viewModel.getFilteredEvents()
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -96,7 +77,7 @@ fun SearchBottomSheet(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 60.dp) // Account for status bar
+                .padding(top = 60.dp)
         ) {
             // Header
             Row(
@@ -113,7 +94,6 @@ fun SearchBottomSheet(
                     color = Color.White
                 )
 
-                // Close button
                 Box(
                     modifier = Modifier
                         .size(30.dp)
@@ -149,10 +129,10 @@ fun SearchBottomSheet(
                     tint = Color(0xFF8E8E93),
                     modifier = Modifier.size(20.dp)
                 )
-                
+
                 BasicTextField(
-                    value = searchQuery,
-                    onValueChange = { searchQuery = it },
+                    value = viewModel.searchQuery,
+                    onValueChange = { viewModel.updateSearchQuery(it) },
                     modifier = Modifier
                         .weight(1f)
                         .padding(start = 8.dp),
@@ -165,12 +145,10 @@ fun SearchBottomSheet(
                         imeAction = ImeAction.Search
                     ),
                     keyboardActions = KeyboardActions(
-                        onSearch = {
-                            submittedQuery = searchQuery
-                        }
+                        onSearch = { viewModel.submitSearch() }
                     ),
                     decorationBox = { innerTextField ->
-                        if (searchQuery.isEmpty()) {
+                        if (viewModel.searchQuery.isEmpty()) {
                             Text(
                                 text = "Search",
                                 color = Color(0xFF8E8E93),
@@ -180,31 +158,41 @@ fun SearchBottomSheet(
                         innerTextField()
                     }
                 )
-                
-                if (searchQuery.isNotEmpty()) {
+
+                if (viewModel.searchQuery.isNotEmpty()) {
                     Icon(
                         imageVector = Icons.Default.Close,
                         contentDescription = "Clear",
                         tint = Color(0xFF8E8E93),
                         modifier = Modifier
                             .size(18.dp)
-                            .clickable {
-                                searchQuery = ""
-                                submittedQuery = ""
-                            }
+                            .clickable { viewModel.clearSearch() }
                     )
                 }
             }
 
             Spacer(modifier = Modifier.height(20.dp))
 
+            // Loading indicator
+            if (isLoading) {
+                Box(
+                    modifier = Modifier.fillMaxWidth(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator(
+                        color = Color.White,
+                        modifier = Modifier.size(24.dp)
+                    )
+                }
+            }
+
             // Search results
             LazyColumn(
                 modifier = Modifier.fillMaxWidth(),
                 contentPadding = PaddingValues(horizontal = 20.dp)
             ) {
-                if (submittedQuery.isNotBlank()) {
-                    if (filteredEvents.isEmpty()) {
+                if (viewModel.submittedQuery.isNotBlank()) {
+                    if (filteredEvents.isEmpty() && !isLoading) {
                         item {
                             Text(
                                 text = "No Results",
@@ -217,15 +205,12 @@ fun SearchBottomSheet(
                         items(filteredEvents) { event ->
                             SearchResultRow(
                                 event = event,
-                                onClick = {
-                                    onEventSelected(event)
-                                }
+                                onClick = { onEventSelected(event) }
                             )
                         }
                     }
                 }
             }
-
         }
     }
 }
@@ -242,12 +227,11 @@ private fun SearchResultRow(
             .padding(vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Purple vertical line
         Box(
             modifier = Modifier
                 .width(4.dp)
                 .height(40.dp)
-                .background(Color(0xFF8E44AD)) // Purple color from iOS design
+                .background(event.color)
         )
 
         Spacer(modifier = Modifier.width(16.dp))
@@ -261,7 +245,7 @@ private fun SearchResultRow(
                 fontWeight = FontWeight.Medium,
                 color = Color.White
             )
-            
+
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -277,7 +261,6 @@ private fun SearchResultRow(
 
                 Text(
                     text = if (event.isMultiDay) {
-                        // Show date range for multi-day events
                         val startDate = SimpleDateFormat("MMM d, yyyy", Locale.getDefault()).format(
                             java.util.Calendar.getInstance().apply {
                                 set(event.startTime.year, event.startTime.monthNumber - 1, event.startTime.dayOfMonth)
@@ -300,7 +283,7 @@ private fun SearchResultRow(
                     color = Color(0xFF8E8E93)
                 )
             }
-            
+
             if (event.location.isNotBlank()) {
                 Text(
                     text = event.location,

@@ -11,13 +11,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -36,34 +34,22 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.activity.compose.BackHandler
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
-
-enum class SettingsSheet {
-    Appearance,
-    EditEvent,
-    Notification,
-    Help
-}
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.practical.calendar.ui.viewmodel.SettingsSheet
+import com.practical.calendar.ui.viewmodel.SettingsViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsBottomSheet(
-    onDismiss: () -> Unit
+    onDismiss: () -> Unit,
+    viewModel: SettingsViewModel = hiltViewModel()
 ) {
-    var activeSheet by remember { mutableStateOf<SettingsSheet?>(null) }
-
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         modifier = Modifier.fillMaxSize(),
@@ -75,7 +61,7 @@ fun SettingsBottomSheet(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 60.dp) // Account for status bar
+                .padding(top = 60.dp)
         ) {
             // Header
             Row(
@@ -92,7 +78,6 @@ fun SettingsBottomSheet(
                     color = Color.White
                 )
 
-                // Close button
                 Box(
                     modifier = Modifier
                         .size(30.dp)
@@ -122,22 +107,22 @@ fun SettingsBottomSheet(
                         modifier = Modifier.padding(top = 20.dp, bottom = 12.dp)
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Appearance",
                         icon = Icons.Default.Palette,
-                        iconColor = Color(0xFF007AFF), // iOS blue
-                        onClick = { activeSheet = SettingsSheet.Appearance }
+                        iconColor = Color(0xFF007AFF),
+                        onClick = { viewModel.navigateToSheet(SettingsSheet.Appearance) }
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Edit Event",
                         icon = Icons.Default.Edit,
                         iconColor = Color(0xFF007AFF),
-                        onClick = { activeSheet = SettingsSheet.EditEvent }
+                        onClick = { viewModel.navigateToSheet(SettingsSheet.EditEvent) }
                     )
                 }
 
@@ -146,7 +131,7 @@ fun SettingsBottomSheet(
                         title = "Notification",
                         icon = Icons.Default.Notifications,
                         iconColor = Color(0xFF007AFF),
-                        onClick = { activeSheet = SettingsSheet.Notification }
+                        onClick = { viewModel.navigateToSheet(SettingsSheet.Notification) }
                     )
                 }
 
@@ -157,7 +142,7 @@ fun SettingsBottomSheet(
                         modifier = Modifier.padding(top = 32.dp, bottom = 12.dp)
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Send Feedback",
@@ -166,13 +151,13 @@ fun SettingsBottomSheet(
                         onClick = { }
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Help",
                         icon = Icons.Default.Help,
                         iconColor = Color(0xFF007AFF),
-                        onClick = { activeSheet = SettingsSheet.Help }
+                        onClick = { viewModel.navigateToSheet(SettingsSheet.Help) }
                     )
                 }
 
@@ -183,7 +168,7 @@ fun SettingsBottomSheet(
                         modifier = Modifier.padding(top = 32.dp, bottom = 12.dp)
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Share App",
@@ -192,7 +177,7 @@ fun SettingsBottomSheet(
                         onClick = { }
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Write an App Store Review",
@@ -201,7 +186,7 @@ fun SettingsBottomSheet(
                         onClick = { }
                     )
                 }
-                
+
                 item {
                     SettingsRow(
                         title = "Donation",
@@ -214,10 +199,10 @@ fun SettingsBottomSheet(
         }
 
         // Show active sheet if needed
-        when (activeSheet) {
+        when (viewModel.activeSheet) {
             SettingsSheet.Appearance -> {
                 AppearanceBottomSheet(
-                    onDismiss = { activeSheet = null }
+                    onDismiss = { viewModel.navigateToSheet(null) }
                 )
             }
             SettingsSheet.EditEvent -> {
@@ -283,14 +268,8 @@ private fun SettingsRow(
         Icon(
             imageVector = Icons.Default.ChevronRight,
             contentDescription = "Navigate",
-            tint = Color(0xFF8E8E93), // iOS secondary color
+            tint = Color(0xFF8E8E93),
             modifier = Modifier.size(20.dp)
         )
     }
 }
-
-data class SettingsItem(
-    val title: String,
-    val icon: ImageVector,
-    val onClick: () -> Unit
-)

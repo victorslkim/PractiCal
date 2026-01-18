@@ -15,12 +15,12 @@ import androidx.core.content.ContextCompat
 import androidx.activity.viewModels
 import com.practical.calendar.ui.screen.MainScreen
 import com.practical.calendar.ui.theme.PractiCalTheme
-import com.practical.calendar.ui.viewmodel.CalendarViewModel
+import com.practical.calendar.ui.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    private val calendarViewModel: CalendarViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModels()
 
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -30,10 +30,10 @@ class MainActivity : ComponentActivity() {
 
         if (calendarReadGranted && calendarWriteGranted) {
             // Permissions granted, notify ViewModel to load data
-            calendarViewModel.onPermissionsGranted()
+            mainViewModel.onPermissionsGranted()
         } else {
             // Permissions denied, notify ViewModel
-            calendarViewModel.onPermissionsDenied()
+            mainViewModel.onPermissionsDenied()
         }
     }
 
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
 
         if (readPermission.isGranted() && writePermission.isGranted()) {
             // Permissions already granted, notify ViewModel immediately
-            calendarViewModel.onPermissionsGranted()
+            mainViewModel.onPermissionsGranted()
         } else {
             // Need to request permissions
             permissionLauncher.launch(
