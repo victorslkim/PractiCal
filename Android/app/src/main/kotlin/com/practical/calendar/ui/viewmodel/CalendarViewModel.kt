@@ -1,6 +1,7 @@
 package com.practical.calendar.ui.viewmodel
 
 import android.content.Context
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -14,6 +15,7 @@ import com.practical.calendar.data.WeekSettings
 import com.practical.calendar.data.HolidayManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,6 +24,7 @@ import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.DateTimeUnit
+import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.plus
 import kotlinx.datetime.minus
 import kotlinx.datetime.toLocalDateTime
@@ -37,7 +40,7 @@ class CalendarViewModel @Inject constructor(
 
     private val holidayManager = HolidayManager()
 
-    private val _uiState = MutableStateFlow(CalendarUiState())
+    private val _uiState: MutableStateFlow<CalendarUiState> = MutableStateFlow(CalendarUiState())
     val uiState: StateFlow<CalendarUiState> = _uiState.asStateFlow()
 
     private val _events = MutableStateFlow<List<Event>>(emptyList())
@@ -153,7 +156,7 @@ class CalendarViewModel @Inject constructor(
                         !loadedMonths.contains(month) || 
                         !loadedMonths.contains(nextMonth)
         
-        android.util.Log.d("PerformanceDebug", "shouldLoadEventsForMonth($month): $shouldLoad - loadedMonths: ${loadedMonths.size} months")
+        Log.d("PerformanceDebug", "shouldLoadEventsForMonth($month): $shouldLoad - loadedMonths: ${loadedMonths.size} months")
         
         return shouldLoad
     }
@@ -162,7 +165,7 @@ class CalendarViewModel @Inject constructor(
     fun loadEventsForMonthAndAdjacent(month: LocalDate) {
         if (!hasPermissions) return
         
-        android.util.Log.d("PerformanceDebug", "loadEventsForMonthAndAdjacent($month) called")
+        Log.d("PerformanceDebug", "loadEventsForMonthAndAdjacent($month) called")
         
         val previousMonth = month.minus(1, DateTimeUnit.MONTH)
         val nextMonth = month.plus(1, DateTimeUnit.MONTH)
@@ -171,26 +174,26 @@ class CalendarViewModel @Inject constructor(
         
         // Only load months that haven't been loaded yet
         if (!loadedMonths.contains(previousMonth)) {
-            android.util.Log.d("PerformanceDebug", "Loading previousMonth: $previousMonth")
+            Log.d("PerformanceDebug", "Loading previousMonth: $previousMonth")
             loadEventsForMonth(previousMonth)
             loadCount++
         }
         if (!loadedMonths.contains(month)) {
-            android.util.Log.d("PerformanceDebug", "Loading currentMonth: $month")
+            Log.d("PerformanceDebug", "Loading currentMonth: $month")
             loadEventsForMonth(month)
             loadCount++
         }
         if (!loadedMonths.contains(nextMonth)) {
-            android.util.Log.d("PerformanceDebug", "Loading nextMonth: $nextMonth")
+            Log.d("PerformanceDebug", "Loading nextMonth: $nextMonth")
             loadEventsForMonth(nextMonth)
             loadCount++
         }
         
-        android.util.Log.d("PerformanceDebug", "loadEventsForMonthAndAdjacent completed - loaded $loadCount months")
+        Log.d("PerformanceDebug", "loadEventsForMonthAndAdjacent completed - loaded $loadCount months")
     }
     
     private fun loadEventsForMonth(month: LocalDate) {
-        android.util.Log.d("PerformanceDebug", "loadEventsForMonth($month) - START")
+        Log.d("PerformanceDebug", "loadEventsForMonth($month) - START")
         viewModelScope.launch {
             try {
                 // Create simple date range for the month using kotlinx.datetime
@@ -201,13 +204,13 @@ class CalendarViewModel @Inject constructor(
                     else -> 30
                 }
                 
-                val startDate = kotlinx.datetime.LocalDateTime(
+                val startDate = LocalDateTime(
                     month.year,
                     month.monthNumber,
                     1,
                     0, 0, 0
                 )
-                val endDate = kotlinx.datetime.LocalDateTime(
+                val endDate = LocalDateTime(
                     month.year,
                     month.monthNumber,
                     daysInMonth,
@@ -237,8 +240,8 @@ class CalendarViewModel @Inject constructor(
                 val currentEventsByDate = _eventsByDate.value.toMutableMap()
                 
                 // Remove existing events for this month from eventsByDate
-                val monthStart = kotlinx.datetime.LocalDate(month.year, month.monthNumber, 1)
-                val monthEnd = kotlinx.datetime.LocalDate(month.year, month.monthNumber, daysInMonth)
+                val monthStart = LocalDate(month.year, month.monthNumber, 1)
+                val monthEnd = LocalDate(month.year, month.monthNumber, daysInMonth)
                 
                 // Clear events for this month's date range
                 var currentDate = monthStart
@@ -269,7 +272,7 @@ class CalendarViewModel @Inject constructor(
                 // Mark this month as loaded
                 loadedMonths.add(month)
                 
-                android.util.Log.d("PerformanceDebug", "loadEventsForMonth($month) - COMPLETED - loaded ${events.size} events")
+                Log.d("PerformanceDebug", "loadEventsForMonth($month) - COMPLETED - loaded ${events.size} events")
                 
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -297,7 +300,7 @@ class CalendarViewModel @Inject constructor(
         shouldScrollToToday = true
         // Reset the trigger after a short delay
         viewModelScope.launch {
-            kotlinx.coroutines.delay(100)
+            delay(100)
             shouldScrollToToday = false
         }
 
@@ -378,20 +381,20 @@ class CalendarViewModel @Inject constructor(
         if (!hasPermissions) return
         
         // Use smart caching approach instead of loading expanded range
-        android.util.Log.d("PerformanceDebug", "loadEvents() called - using smart caching approach")
+        Log.d("PerformanceDebug", "loadEvents() called - using smart caching approach")
         loadEventsForMonthAndAdjacent(currentMonth)
     }
 
     private fun distributeEventsAcrossDays(events: List<Event>): Map<LocalDate, List<Event>> {
         val eventsByDate = mutableMapOf<LocalDate, MutableList<Event>>()
         
-        android.util.Log.d("CalendarViewModel", "Distributing ${events.size} events")
+        Log.d("CalendarViewModel", "Distributing ${events.size} events")
         
         events.forEach { event ->
             var currentDate = event.startTime.date
             val endDate = event.endTime.date
             
-            android.util.Log.d("CalendarViewModel", "Event '${event.name}': ${event.startTime.date} to ${event.endTime.date} (isAllDay=${event.isAllDay}, isMultiDay=${event.isMultiDay})")
+            Log.d("CalendarViewModel", "Event '${event.name}': ${event.startTime.date} to ${event.endTime.date} (isAllDay=${event.isAllDay}, isMultiDay=${event.isMultiDay})")
             
             // Add event to all days it spans (like iOS does)
             while (currentDate <= endDate) {
@@ -399,14 +402,14 @@ class CalendarViewModel @Inject constructor(
                     eventsByDate[currentDate] = mutableListOf()
                 }
                 eventsByDate[currentDate]?.add(event)
-                android.util.Log.d("CalendarViewModel", "  -> Added to $currentDate")
+                Log.d("CalendarViewModel", "  -> Added to $currentDate")
                 
                 // Move to next day
                 currentDate = currentDate.plus(1, DateTimeUnit.DAY)
             }
         }
         
-        android.util.Log.d("CalendarViewModel", "Final eventsByDate has ${eventsByDate.size} dates with events")
+        Log.d("CalendarViewModel", "Final eventsByDate has ${eventsByDate.size} dates with events")
         
         return eventsByDate
     }
@@ -465,33 +468,33 @@ class CalendarViewModel @Inject constructor(
     }
 
     fun loadSearchEvents() {
-        android.util.Log.d("CalendarViewModel", "loadSearchEvents called - hasPermissions: $hasPermissions")
+        Log.d("CalendarViewModel", "loadSearchEvents called - hasPermissions: $hasPermissions")
         if (!hasPermissions) {
-            android.util.Log.w("CalendarViewModel", "loadSearchEvents: No permissions, returning")
+            Log.w("CalendarViewModel", "loadSearchEvents: No permissions, returning")
             return
         }
 
-        android.util.Log.d("CalendarViewModel", "loadSearchEvents: selectedCalendarIds: $selectedCalendarIds (${selectedCalendarIds.size} calendars)")
+        Log.d("CalendarViewModel", "loadSearchEvents: selectedCalendarIds: $selectedCalendarIds (${selectedCalendarIds.size} calendars)")
 
         viewModelScope.launch {
             try {
                 val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
 
                 // Create +/- 2 years date range for search
-                val startDate = kotlinx.datetime.LocalDateTime(
+                val startDate = LocalDateTime(
                     today.year - 2,
                     today.monthNumber,
                     today.dayOfMonth,
                     0, 0, 0
                 )
-                val endDate = kotlinx.datetime.LocalDateTime(
+                val endDate = LocalDateTime(
                     today.year + 2,
                     today.monthNumber,
                     today.dayOfMonth,
                     23, 59, 59
                 )
 
-                android.util.Log.d("CalendarViewModel", "loadSearchEvents: Querying events from $startDate to $endDate")
+                Log.d("CalendarViewModel", "loadSearchEvents: Querying events from $startDate to $endDate")
 
                 val events = calendarRepository.getEvents(
                     startDate = startDate,
@@ -499,16 +502,16 @@ class CalendarViewModel @Inject constructor(
                     selectedCalendarIds = selectedCalendarIds
                 )
 
-                android.util.Log.d("CalendarViewModel", "loadSearchEvents: Fetched ${events.size} events")
+                Log.d("CalendarViewModel", "loadSearchEvents: Fetched ${events.size} events")
                 events.take(5).forEach { event ->
-                    android.util.Log.d("CalendarViewModel", "  Sample event: '${event.name}' at ${event.startTime}")
+                    Log.d("CalendarViewModel", "  Sample event: '${event.name}' at ${event.startTime}")
                 }
 
                 _searchEvents.value = events.sortedByDescending { it.startTime }
-                android.util.Log.d("CalendarViewModel", "loadSearchEvents: Set searchEvents to ${_searchEvents.value.size} events")
+                Log.d("CalendarViewModel", "loadSearchEvents: Set searchEvents to ${_searchEvents.value.size} events")
 
             } catch (e: Exception) {
-                android.util.Log.e("CalendarViewModel", "Failed to load search events: ${e.message}")
+                Log.e("CalendarViewModel", "Failed to load search events: ${e.message}")
                 e.printStackTrace()
                 // Keep existing search events on error
             }
