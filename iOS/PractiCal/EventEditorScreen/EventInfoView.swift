@@ -169,7 +169,7 @@ struct EventInfoView: View {
 
 #Preview {
     EventInfoView(
-        viewModel: CalendarViewModel(languageManager: LanguageManager()),
+        viewModel: CalendarViewModel(),
         event: Event(
             id: "preview",
             name: "Sample Event",

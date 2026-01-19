@@ -218,20 +218,18 @@ struct SettingsRow: View {
 struct AppearanceSettingsView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var themeManager: ThemeManager
-    @EnvironmentObject var languageManager: LanguageManager
     @EnvironmentObject var appSettings: AppSettings
-    @State private var showLanguageSelection = false
-    
+
     @AppStorage("first_day_of_week") private var firstDayOfWeekRaw = FirstDayOfWeek.sunday.rawValue
     @AppStorage("highlight_holidays") private var highlightHolidays = true
     @AppStorage("highlight_saturdays") private var highlightSaturdays = false
     @AppStorage("highlight_sundays") private var highlightSundays = true
-    
+
     private var firstDayOfWeek: FirstDayOfWeek {
         get { FirstDayOfWeek(rawValue: firstDayOfWeekRaw) ?? .sunday }
         set { firstDayOfWeekRaw = newValue.rawValue }
     }
-    
+
     private let themes = ["system", "light", "dark"]
     private let colors = ["blue", "green", "orange", "purple", "red", "yellow"]
     
@@ -291,18 +289,6 @@ struct AppearanceSettingsView: View {
                     }
                     
 
-                    
-                    // Language Row
-                    HStack {
-                        Text(L("language"))
-                        Spacer()
-                        Text(languageManager.selectedLanguage.displayName)
-                            .foregroundColor(.secondary)
-                    }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        showLanguageSelection = true
-                    }
                     
                     // Highlight Row
                     HStack {
@@ -435,9 +421,6 @@ struct AppearanceSettingsView: View {
                 }
             }
         }
-        .sheet(isPresented: $showLanguageSelection) {
-            LanguageSelectionView()
-        }
     }
 }
 
@@ -487,5 +470,5 @@ class MailComposeDelegate: NSObject, MFMailComposeViewControllerDelegate {
 }
 
 #Preview {
-    SettingsView(viewModel: CalendarViewModel(languageManager: LanguageManager()))
+    SettingsView(viewModel: CalendarViewModel())
 }

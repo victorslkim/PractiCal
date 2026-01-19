@@ -41,12 +41,10 @@ struct MainView: View {
     @State private var viewModel: CalendarViewModel
     @State private var activeSheet: SheetType?
     @State private var hasRequestedPermission = false
-    @EnvironmentObject var languageManager: LanguageManager
     @Environment(\.scenePhase) private var scenePhase
-    
+
     init() {
-        // Initialize viewModel with a placeholder - will be set in onAppear
-        self._viewModel = State(initialValue: CalendarViewModel(languageManager: LanguageManager()))
+        self._viewModel = State(initialValue: CalendarViewModel())
     }
     
     
@@ -168,9 +166,6 @@ struct MainView: View {
             }
         }
         .onAppear {
-            // Update viewModel with the correct languageManager
-            viewModel = CalendarViewModel(languageManager: languageManager)
-
             // Handle permissions like Android's MainActivity
             checkAndRequestCalendarPermissions()
         }

@@ -72,9 +72,7 @@ class CalendarViewModel {
     
     // Holiday manager
     private let holidayManager = HolidayManager()
-    
-    // Language manager for locale-aware formatting
-    private let languageManager: LanguageManager
+
     private let lastViewModeKey: String = "last_view_mode"
     
     private var calendar: Calendar {
@@ -84,9 +82,7 @@ class CalendarViewModel {
     }
     let calendarManager = CalendarManager()
     
-    init(languageManager: LanguageManager) {
-        self.languageManager = languageManager
-
+    init() {
         // Initialize month range start date
         let today = Date()
         var cal = Calendar.current
@@ -136,23 +132,7 @@ class CalendarViewModel {
                 await loadCalendarEvents()
             }
         }
-        
-        // Observe language changes to refresh date formatting
-        NotificationCenter.default.addObserver(
-            forName: NSNotification.Name("LanguageChanged"),
-            object: nil,
-            queue: .main
-        ) { _ in
-            // Force UI refresh by triggering a property change
-            Task { @MainActor in
-                // HACK: Force UI refresh by reassigning selectedDate to itself
-                // This triggers the @Observable system to think the property changed,
-                // causing the UI to re-render with updated date formatting
-                let temp = self.selectedDate
-                self.selectedDate = temp
-            }
-        }
-        
+
         // Restore last saved view mode
         restoreLastViewMode()
     }
@@ -365,11 +345,15 @@ class CalendarViewModel {
     }
     
     var monthName: String {
-        return languageManager.localizedMonthName(for: selectedDate)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM"
+        return formatter.string(from: selectedDate).uppercased()
     }
-    
+
     var selectedDateString: String {
-        return languageManager.localizedFullDate(for: selectedDate)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        return formatter.string(from: selectedDate)
     }
     
     var daysInMonth: [Date] {

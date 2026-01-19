@@ -449,5 +449,5 @@ private struct MonthContentView: View {
 
 #Preview {
     MonthView()
-        .environment(CalendarViewModel(languageManager: LanguageManager()))
+        .environment(CalendarViewModel())
 }

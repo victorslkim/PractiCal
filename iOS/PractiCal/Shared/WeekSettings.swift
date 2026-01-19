@@ -8,17 +8,23 @@ enum FirstDayOfWeek: Int, CaseIterable {
     case thursday = 5
     case friday = 6
     case saturday = 7
-    
+
     var displayName: String {
-        // Use LanguageManager's full weekday symbols to localize
-        return LanguageManager.localizedWeekdayLabel(forWeekday: self.rawValue)
+        let formatter = DateFormatter()
+        let symbols = formatter.weekdaySymbols ?? []
+        let index = self.rawValue - 1
+        guard index >= 0 && index < symbols.count else { return "" }
+        return symbols[index]
     }
-    
+
     var shortLabel: String {
-        // Use LanguageManager's very short weekday symbols to localize single-letter labels
-        return LanguageManager.localizedVeryShortWeekdayLabel(forWeekday: self.rawValue)
+        let formatter = DateFormatter()
+        let symbols = formatter.veryShortWeekdaySymbols ?? []
+        let index = self.rawValue - 1
+        guard index >= 0 && index < symbols.count else { return "" }
+        return symbols[index].uppercased()
     }
-    
+
     static var current: FirstDayOfWeek {
         let rawValue = UserDefaults.standard.integer(forKey: "first_day_of_week")
         return FirstDayOfWeek(rawValue: rawValue) ?? .sunday

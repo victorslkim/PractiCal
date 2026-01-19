@@ -254,5 +254,5 @@ class MainViewModel @Inject constructor(
 
 ## TODO
 - [x] Refactor Android to 1:1 screen-viewmodel pattern (e.g., SettingsViewModel for SettingsBottomSheet)
-- [ ] Drop localization requirement - remove localization code until production-ready
+- [x] Drop localization requirement - remove localization code until production-ready
 - [ ] Extract CalendarRepository API to interface with clear documentation for each function (both Android and iOS)

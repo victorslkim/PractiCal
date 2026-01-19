@@ -222,5 +222,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(viewModel: CalendarViewModel(languageManager: LanguageManager()))
+    SearchView(viewModel: CalendarViewModel())
 }

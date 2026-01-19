@@ -89,5 +89,5 @@ struct EditEventSettingsView: View {
 }
 
 #Preview {
-    EditEventSettingsView(viewModel: CalendarViewModel(languageManager: LanguageManager()))
+    EditEventSettingsView(viewModel: CalendarViewModel())
 }

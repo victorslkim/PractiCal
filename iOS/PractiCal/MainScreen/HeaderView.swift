@@ -82,5 +82,5 @@ struct HeaderView: View {
         onCalendarSelectionTapped: {},
         onDebugToggled: {}
     )
-    .environment(CalendarViewModel(languageManager: LanguageManager()))
+    .environment(CalendarViewModel())
 }

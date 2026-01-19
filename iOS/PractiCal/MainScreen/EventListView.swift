@@ -53,9 +53,13 @@ struct EventRowCard: View {
         if event.isFullDay {
             return L("all_day")
         } else {
-            return appSettings.use24HourTime ? 
-                LanguageManager().localizedTime(for: event.time) :
-                event.timeString
+            if appSettings.use24HourTime {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "HH:mm"
+                return formatter.string(from: event.time)
+            } else {
+                return event.timeString
+            }
         }
     }
     
@@ -115,7 +119,7 @@ struct EventRowCard: View {
 
 #Preview {
     EventListView(
-        viewModel: CalendarViewModel(languageManager: LanguageManager()),
+        viewModel: CalendarViewModel(),
         onEventTapped: { _ in }
     )
 }

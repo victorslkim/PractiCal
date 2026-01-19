@@ -528,5 +528,5 @@ struct RepeatPickerSheet: View {
 }
 
 #Preview {
-    EventEditorView(viewModel: CalendarViewModel(languageManager: LanguageManager()), eventToEdit: nil)
+    EventEditorView(viewModel: CalendarViewModel(), eventToEdit: nil)
 }

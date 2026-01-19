@@ -18,9 +18,10 @@ struct Event: Identifiable, Hashable {
         if isAllDay {
             return L("all_day")
         }
-        
-        // Use global localized time formatting
-        return localizedTime(for: time)
+
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: time)
     }
     
     var isMultiDay: Bool {
