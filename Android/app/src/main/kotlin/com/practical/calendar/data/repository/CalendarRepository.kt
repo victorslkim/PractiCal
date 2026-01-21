@@ -23,9 +23,9 @@ import javax.inject.Singleton
 @Singleton
 class CalendarRepository @Inject constructor(
     private val contentResolver: ContentResolver
-) {
+) : ICalendarRepository {
 
-    suspend fun getEvents(
+    override suspend fun getEvents(
         startDate: LocalDateTime,
         endDate: LocalDateTime,
         selectedCalendarIds: Set<String>
@@ -146,7 +146,7 @@ class CalendarRepository @Inject constructor(
         events
     }
 
-    suspend fun getAvailableCalendars(): List<CalendarInfo> = withContext(Dispatchers.IO) {
+    override suspend fun getAvailableCalendars(): List<CalendarInfo> = withContext(Dispatchers.IO) {
         val calendars = mutableListOf<CalendarInfo>()
 
         val projection = arrayOf(
@@ -186,6 +186,68 @@ class CalendarRepository @Inject constructor(
         }
 
         calendars
+    }
+
+    override suspend fun saveEvent(
+        eventId: String?,
+        title: String,
+        startDate: LocalDateTime,
+        endDate: LocalDateTime,
+        isAllDay: Boolean,
+        location: String,
+        description: String,
+        calendarId: String
+    ): String? = withContext(Dispatchers.IO) {
+        try {
+            val values = android.content.ContentValues().apply {
+                put(CalendarContract.Events.TITLE, title)
+                put(CalendarContract.Events.CALENDAR_ID, calendarId.toLong())
+                put(CalendarContract.Events.EVENT_LOCATION, location.ifEmpty { null })
+                put(CalendarContract.Events.DESCRIPTION, description.ifEmpty { null })
+                put(CalendarContract.Events.ALL_DAY, if (isAllDay) 1 else 0)
+
+                if (isAllDay) {
+                    // For all-day events, use UTC timezone and set times to midnight
+                    put(CalendarContract.Events.EVENT_TIMEZONE, "UTC")
+                    val startMillis = startDate.date.toEpochDays() * 24 * 60 * 60 * 1000L
+                    // Android stores all-day event end as start of next day
+                    val endMillis = (endDate.date.toEpochDays() + 1) * 24 * 60 * 60 * 1000L
+                    put(CalendarContract.Events.DTSTART, startMillis)
+                    put(CalendarContract.Events.DTEND, endMillis)
+                } else {
+                    put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.currentSystemDefault().id)
+                    val startMillis = startDate.toInstant(TimeZone.currentSystemDefault()).toEpochMilliseconds()
+                    val endMillis = endDate.toInstant(TimeZone.currentSystemDefault()).toEpochMilliseconds()
+                    put(CalendarContract.Events.DTSTART, startMillis)
+                    put(CalendarContract.Events.DTEND, endMillis)
+                }
+            }
+
+            if (eventId != null) {
+                // Update existing event
+                val eventUri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, eventId.toLong())
+                val rowsUpdated = contentResolver.update(eventUri, values, null, null)
+                if (rowsUpdated > 0) eventId else null
+            } else {
+                // Insert new event
+                val uri = contentResolver.insert(CalendarContract.Events.CONTENT_URI, values)
+                uri?.lastPathSegment
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("CalendarRepository", "Error saving event: ${e.message}", e)
+            null
+        }
+    }
+
+    override suspend fun deleteEvent(eventId: String): Boolean = withContext(Dispatchers.IO) {
+        try {
+            val eventUri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, eventId.toLong())
+            val rowsDeleted = contentResolver.delete(eventUri, null, null)
+            rowsDeleted > 0
+        } catch (e: Exception) {
+            android.util.Log.e("CalendarRepository", "Error deleting event: ${e.message}", e)
+            false
+        }
     }
 }
 

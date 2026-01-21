@@ -252,7 +252,59 @@ class MainViewModel @Inject constructor(
 - Event loading: use smart caching per month, avoid loading wide date ranges
 - HorizontalPager: set `beyondBoundsPageCount = 1` to limit simultaneous renders
 
+## CalendarRepository API
+
+The CalendarRepository provides a unified interface for calendar operations on both iOS and Android platforms.
+
+### iOS: `CalendarRepositoryProtocol` (CalendarRepositoryProtocol.swift)
+
+Implemented by `CalendarManager`. Uses EventKit for calendar operations.
+
+### Android: `ICalendarRepository` (ICalendarRepository.kt)
+
+Implemented by `CalendarRepository`. Uses ContentResolver with CalendarContract.
+
+### Common Operations
+
+| Operation | iOS | Android |
+|-----------|-----|---------|
+| Check permission | `hasPermission: Bool` | Runtime permission check |
+| Request permission | `requestPermission(onComplete:)` | Android permission system |
+| Get calendars | `availableCalendars: [EKCalendar]` | `getAvailableCalendars(): List<CalendarInfo>` |
+| Get events | `fetchEvents(from:to:)` | `getEvents(startDate, endDate, selectedCalendarIds)` |
+| Save event | `saveEvent(eventId:title:...)` | `saveEvent(eventId, title, ...): String?` |
+| Delete event | `deleteEvent(eventId:)` | `deleteEvent(eventId): Boolean` |
+| Refresh data | `forceRefresh()` | (re-query ContentResolver) |
+
+### Event Model Properties
+
+Both platforms use equivalent Event models:
+- `id: String` - Unique identifier
+- `name/title: String` - Event name
+- `startTime/time: Date/LocalDateTime` - Start time
+- `endTime: Date/LocalDateTime` - End time
+- `location: String` - Location (optional)
+- `description/notes: String` - Description (optional)
+- `calendarId: String` - Parent calendar ID
+- `calendarColor: Color/Long` - Display color
+- `isAllDay: Boolean` - All-day event flag
+- `isRecurring: Boolean` - Has recurrence rules
+
+### Platform Differences
+
+**iOS:**
+- Permission via `EKEventStore.requestFullAccessToEvents()`
+- Events identified by `EKEvent.eventIdentifier`
+- Calendar colors from `EKCalendar.cgColor`
+- Selected calendars managed in CalendarManager
+
+**Android:**
+- Permission via runtime permission system (READ_CALENDAR, WRITE_CALENDAR)
+- Events identified by `CalendarContract.Events._ID`
+- Calendar colors from `CalendarContract.Calendars.CALENDAR_COLOR`
+- Selected calendars passed to each query
+
 ## TODO
 - [x] Refactor Android to 1:1 screen-viewmodel pattern (e.g., SettingsViewModel for SettingsBottomSheet)
 - [ ] Drop localization requirement - remove localization code until production-ready
-- [ ] Extract CalendarRepository API to interface with clear documentation for each function (both Android and iOS)
+- [x] Extract CalendarRepository API to interface with clear documentation for each function (both Android and iOS)
