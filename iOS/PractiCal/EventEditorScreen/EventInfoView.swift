@@ -47,7 +47,7 @@ struct EventInfoView: View {
                                 .frame(width: 20)
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(L("start_date"))
+                                Text("Start")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 Text(formatDate(event.time, isAllDay: event.isAllDay))
@@ -63,7 +63,7 @@ struct EventInfoView: View {
                                 .frame(width: 20)
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(L("end_date"))
+                                Text("End")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 Text(formatDate(event.endTime, isAllDay: event.isAllDay))
@@ -83,7 +83,7 @@ struct EventInfoView: View {
                             .frame(width: 20)
                         
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(L("calendar"))
+                            Text("Calendar")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                             HStack(spacing: 8) {
@@ -110,7 +110,7 @@ struct EventInfoView: View {
                                 .frame(width: 20)
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(L("location"))
+                                Text("Location")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 Text(event.location)
@@ -131,7 +131,7 @@ struct EventInfoView: View {
                                 .frame(width: 20)
                             
                             VStack(alignment: .leading, spacing: 4) {
-                                Text(L("notes"))
+                                Text("Notes")
                                     .font(.caption)
                                     .foregroundColor(.secondary)
                                 Text(event.description)
@@ -144,7 +144,7 @@ struct EventInfoView: View {
                     }
                 }
             }
-            .navigationTitle(L("event_details"))
+            .navigationTitle("Event Details")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .toolbar {

@@ -23,19 +23,19 @@ struct NotificationSettingsView: View {
                     }
                 }
                 
-                Section(footer: Text(L("notifications_permission_message"))) {
-                    Button(L("open_ios_settings")) {
+                Section(footer: Text("Notifications require permission in iOS Settings > PractiCal > Notifications")) {
+                    Button("Open iOS Settings") {
                         if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
                             UIApplication.shared.open(settingsURL)
                         }
                     }
                 }
             }
-            .navigationTitle(L("notifications"))
+            .navigationTitle("Notifications")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("done")) { dismiss() }
+                    Button("Done") { dismiss() }
                 }
             }
         }

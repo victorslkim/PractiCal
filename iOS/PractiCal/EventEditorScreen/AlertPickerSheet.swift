@@ -23,7 +23,7 @@ struct AlertPickerSheet: View {
                         dismiss()
                     }) {
                         HStack {
-                            Text(L(option.0))
+                            Text(option.1)
                                 .foregroundColor(.primary)
                             Spacer()
                             if selectedAlert == option.0 {
@@ -34,12 +34,12 @@ struct AlertPickerSheet: View {
                     }
                 }
             }
-            .navigationTitle(L("alert"))
+            .navigationTitle("Alert")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(L("cancel")) {
+                    Button("Cancel") {
                         dismiss()
                     }
                 }

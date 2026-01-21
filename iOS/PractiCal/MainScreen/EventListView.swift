@@ -14,7 +14,7 @@ struct EventListView: View {
             
             if viewModel.eventsForSelectedDate.isEmpty {
                 VStack {
-                    Text(L("no_events"))
+                    Text("No events")
                         .foregroundColor(.secondary)
                         .font(.body)
                         .padding(.vertical, 32)
@@ -51,7 +51,7 @@ struct EventRowCard: View {
     
     private var timeString: String {
         if event.isFullDay {
-            return L("all_day")
+            return "All day"
         } else {
             if appSettings.use24HourTime {
                 let formatter = DateFormatter()

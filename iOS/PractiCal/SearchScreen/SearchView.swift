@@ -15,7 +15,7 @@ struct SearchView: View {
             VStack(spacing: 0) {
                 // Header with close button
                 HStack {
-                    Text(L("search"))
+                    Text("Search")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                     Spacer()
@@ -39,7 +39,7 @@ struct SearchView: View {
                         .foregroundColor(.secondary)
                     
                     // Text field
-                    TextField(L("search_events"), text: $searchText)
+                    TextField("Search Events", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                         .submitLabel(.search)
                         .onSubmit {
@@ -81,11 +81,11 @@ struct SearchView: View {
                             .font(.system(size: 48))
                             .foregroundColor(.secondary)
                         
-                        Text(L("search_events"))
+                        Text("Search Events")
                             .font(.title2)
                             .fontWeight(.medium)
                         
-                        Text(L("enter_search_term"))
+                        Text("Enter a search term to find events")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
@@ -101,11 +101,11 @@ struct SearchView: View {
                             .font(.system(size: 48))
                             .foregroundColor(.secondary)
                         
-                        Text(L("no_results"))
+                        Text("No Results")
                             .font(.title2)
                             .fontWeight(.medium)
                         
-                        Text(L("no_events_found").replacingOccurrences(of: "{search_text}", with: searchText))
+                        Text("No events found for \"\(searchText)\"")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)

@@ -123,7 +123,7 @@ struct CalendarPreview: View {
     var body: some View {
         VStack(spacing: 4) {
             // Month header
-            Text(L("december_2024"))
+            Text("December 2024")
                 .font(.caption)
                 .fontWeight(.semibold)
                 .padding(.bottom, 4)

@@ -114,21 +114,21 @@ struct EventEditorView: View {
                         
                         EventTextFieldSection(
                             icon: "location",
-                            placeholder: L("location"),
+                            placeholder: "Location",
                             text: $location
                         )
-                        
+
                         EventTextFieldSection(
                             icon: "link",
-                            placeholder: L("url"),
+                            placeholder: "URL",
                             text: $url,
                             keyboardType: .URL,
                             autocapitalization: .never
                         )
-                        
+
                         EventTextFieldSection(
                             icon: "note.text",
-                            placeholder: L("notes"),
+                            placeholder: "Notes",
                             text: $notes,
                             isMultiline: true
                         )
@@ -138,7 +138,7 @@ struct EventEditorView: View {
                                 Button(action: { 
                                     showRemoveConfirmation = true 
                                 }) {
-                                    Text(L("remove_event"))
+                                    Text("Remove Event")
                                         .foregroundColor(.red)
                                         .font(.system(size: 17, weight: .semibold))
                                         .frame(maxWidth: .infinity)
@@ -176,17 +176,17 @@ struct EventEditorView: View {
             }
         }
         }
-        .alert(L("couldnt_save_event"), isPresented: $showErrorAlert) {
-            Button(L("ok")) { }
+        .alert("Couldn't Save Event", isPresented: $showErrorAlert) {
+            Button("OK") { }
         } message: {
-            Text(errorMessage.isEmpty ? L("try_again") : errorMessage)
+            Text(errorMessage.isEmpty ? "Please try again or choose a different calendar." : errorMessage)
         }
         .actionSheet(isPresented: $showRemoveConfirmation) {
             ActionSheet(
-                title: Text(L("remove_event_confirmation")),
-                message: Text(L("remove_event_message")),
+                title: Text("Remove Event"),
+                message: Text("Are you sure you want to remove this event? This action cannot be undone."),
                 buttons: [
-                    .destructive(Text(L("remove_event"))) {
+                    .destructive(Text("Remove Event")) {
                         removeEvent()
                     },
                     .cancel()
@@ -284,14 +284,14 @@ struct EventEditorView: View {
     
     private func alertLabel(for alertKey: String) -> String {
         switch alertKey {
-        case "none": return L("none")
-        case "at_time_of_event": return L("at_time_of_event")
-        case "5_min_before": return L("5_min_before")
-        case "15_min_before": return L("15_min_before")
-        case "30_min_before": return L("30_min_before")
-        case "1_hour_before": return L("1_hour_before")
-        case "1_day_before": return L("1_day_before")
-        default: return L("none")
+        case "none": return "None"
+        case "at_time_of_event": return "At time of event"
+        case "5_min_before": return "5 min. before"
+        case "15_min_before": return "15 min. before"
+        case "30_min_before": return "30 min. before"
+        case "1_hour_before": return "1 hour before"
+        case "1_day_before": return "1 day before"
+        default: return "None"
         }
     }
     
@@ -390,7 +390,7 @@ struct DatePickerSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("done")) {
+                    Button("Done") {
                         dismiss()
                     }
                 }
@@ -428,7 +428,7 @@ struct CalendarPickerSheet: View {
                             .layoutPriority(0)
 
                         if isReadOnly {
-                            Text(L("read_only"))
+                            Text("(Read-only)")
                                 .foregroundColor(.secondary)
                                 .font(.caption)
                                 .layoutPriority(1)
@@ -459,11 +459,11 @@ struct CalendarPickerSheet: View {
                     }
                 }
             }
-            .navigationTitle(L("calendar"))
+            .navigationTitle("Calendar")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("done")) {
+                    Button("Done") {
                         dismiss()
                     }
                 }
@@ -471,9 +471,9 @@ struct CalendarPickerSheet: View {
         }
         .alert(isPresented: $showInfoAlert) {
             Alert(
-                title: Text(L("read_only_calendar")),
+                title: Text("Read-only Calendar"),
                 message: Text(infoMessage),
-                                        dismissButton: .default(Text(L("ok")))
+                                        dismissButton: .default(Text("OK"))
             )
         }
     }
@@ -513,11 +513,11 @@ struct RepeatPickerSheet: View {
                     }
                 }
             }
-            .navigationTitle(L("repeat"))
+            .navigationTitle("Repeat")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("done")) {
+                    Button("Done") {
                         dismiss()
                     }
                 }

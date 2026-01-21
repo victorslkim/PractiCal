@@ -16,7 +16,7 @@ struct Event: Identifiable, Hashable {
     
     var timeString: String {
         if isAllDay {
-            return L("all_day")
+            return "All day"
         }
 
         let formatter = DateFormatter()

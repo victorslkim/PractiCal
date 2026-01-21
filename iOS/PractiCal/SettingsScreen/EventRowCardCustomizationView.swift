@@ -3,7 +3,7 @@ import SwiftUI
 struct EventRowCardCustomizationView: View {
     @State private var use24HourTime: Bool = false
     @State private var dimPastEvents: Bool = false
-    
+
     var body: some View {
         Form {
             Section {
@@ -15,24 +15,24 @@ struct EventRowCardCustomizationView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 8)
             }
-            
-            Section(L("time_format")) {
-                Toggle(L("24_hour_time"), isOn: $use24HourTime)
+
+            Section("Time Format") {
+                Toggle("24-Hour Time", isOn: $use24HourTime)
             }
-            
-            Section(L("event_visibility")) {
-                Toggle(L("dim_past_events"), isOn: $dimPastEvents)
+
+            Section("Event Visibility") {
+                Toggle("Dim Past Events", isOn: $dimPastEvents)
             }
-            
+
             Section {
-                Button(L("reset_to_defaults")) {
+                Button("Reset to Defaults") {
                     use24HourTime = false
                     dimPastEvents = false
                 }
                 .foregroundColor(.red)
             }
         }
-        .navigationTitle(L("event_row_card_customization"))
+        .navigationTitle("Event Row Card Customization")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -40,7 +40,7 @@ struct EventRowCardCustomizationView: View {
 struct EventRowCardPreview: View {
     let use24HourTime: Bool
     let dimPastEvents: Bool
-    
+
     private var sampleEvent: Event {
         Event(
             id: "preview",
@@ -55,7 +55,7 @@ struct EventRowCardPreview: View {
             isRecurring: false
         )
     }
-    
+
     private var pastEvent: Event {
         Event(
             id: "preview-past",
@@ -70,19 +70,19 @@ struct EventRowCardPreview: View {
             isRecurring: false
         )
     }
-    
+
     var body: some View {
         VStack(spacing: 8) {
-            Text(L("event_row_card_preview"))
+            Text("Event Row Card Preview")
                 .font(.caption)
                 .foregroundColor(.secondary)
-            
+
             VStack(spacing: 8) {
                 EventRowCard(
                     event: sampleEvent,
                     onTapped: {}
                 )
-                
+
                 EventRowCard(
                     event: pastEvent,
                     onTapped: {}

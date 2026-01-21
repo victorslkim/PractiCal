@@ -36,11 +36,11 @@ struct HelpView: View {
                 }
                 .padding(20)
             }
-            .navigationTitle(L("help"))
+            .navigationTitle("Help")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("done")) { dismiss() }
+                    Button("Done") { dismiss() }
                 }
             }
         }

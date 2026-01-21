@@ -36,7 +36,7 @@ struct HeaderView: View {
                     HStack(spacing: 4) {
                         Image(systemName: "arrow.clockwise")
                             .font(.caption)
-                        Text(L("today"))
+                        Text("Today")
                             .font(.caption)
                     }
                 }

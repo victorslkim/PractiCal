@@ -16,7 +16,7 @@ struct CalendarSelectionView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     // Header with close button
                     HStack {
-                        Text(L("calendars"))
+                        Text("Calendars")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                         

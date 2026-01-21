@@ -242,6 +242,15 @@ class MainViewModel @Inject constructor(
 #### di/
 - `AppModule.kt` - Hilt module providing dependencies
 
+## Coding Guidelines
+
+### Best Practices
+- Always follow platform-native patterns and best practices
+- Use hardcoded strings directly instead of wrapper functions or dictionary lookups
+- Avoid temporary hacks or workarounds - implement features properly or defer them
+- No localization wrappers (like `L()` functions) - use plain strings until proper i18n is needed
+- Keep code simple and readable over clever abstractions
+
 ## UI Conventions
 - iOS: SF Symbols for icons, `.sheet()` for modals
 - Android: Material Icons, BottomSheet composables

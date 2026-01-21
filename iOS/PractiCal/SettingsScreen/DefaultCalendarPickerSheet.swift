@@ -16,7 +16,7 @@ struct DefaultCalendarPickerSheet: View {
                         .fill(Color.gray)
                         .frame(width: 12, height: 12)
                     
-                    Text(L("no_default"))
+                    Text("No Default (Use First Available)")
                         .foregroundColor(.primary)
                     
                     Spacer()
@@ -57,11 +57,11 @@ struct DefaultCalendarPickerSheet: View {
                     }
                 }
             }
-            .navigationTitle(L("default_calendar"))
+            .navigationTitle("Default Calendar")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(L("done")) {
+                    Button("Done") {
                         dismiss()
                     }
                 }

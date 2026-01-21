@@ -56,7 +56,7 @@ struct EventDateTimeSection: View {
             // Start Date/Time
             Button(action: onStartDateTap) {
                 HStack {
-                    Text(L("starts"))
+                    Text("Starts")
                         .foregroundColor(.primary)
                     Spacer()
                     Text(formatDate(startDate, isAllDay))
@@ -67,7 +67,7 @@ struct EventDateTimeSection: View {
             // End Date/Time
             Button(action: onEndDateTap) {
                 HStack {
-                    Text(L("ends"))
+                    Text("Ends")
                         .foregroundColor(.primary)
                     Spacer()
                     Text(formatDate(endDate, isAllDay))
@@ -92,7 +92,7 @@ struct EventRepeatSection: View {
                         .foregroundColor(.secondary)
                         .frame(width: 24)
                     
-                    Text(L("repeat"))
+                    Text("Repeat")
                         .foregroundColor(.primary)
                     Spacer()
                     Text(repeatOption)
@@ -118,7 +118,7 @@ struct EventCalendarSection: View {
                         .foregroundColor(.secondary)
                         .frame(width: 24)
                     
-                    Text(L("calendar"))
+                    Text("Calendar")
                         .foregroundColor(.primary)
                     Spacer()
                     
@@ -149,10 +149,10 @@ struct EventAlertSection: View {
                         .foregroundColor(.secondary)
                         .frame(width: 24)
                     
-                    Text(L("alert"))
+                    Text("Alert")
                         .foregroundColor(.primary)
                     Spacer()
-                    Text(L(selectedAlert))
+                    Text(selectedAlert)
                         .foregroundColor(.secondary)
                 }
             }
